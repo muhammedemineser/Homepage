@@ -86,37 +86,50 @@ function playAnimation(element, animationName) {
 themeToggle.addEventListener("click", () => {
   const isDark = document.documentElement.classList.toggle("dark");
 
-  if (isDark) {
+ if (isDark) {
     playAnimation(sun, "fadeOut");
-      setTimeout(() => {
-
-    playAnimation(moon, "fadeIn");
-      }, 1000);
-
-    sun.classList.remove("visible");
-    moon.classList.add("visible");
+    setTimeout(() => {
+      sun.classList.remove("visible");
+      moon.classList.add("visible");
+      playAnimation(moon, "fadeInMoon");
+    }, 1000);
   } else {
-    playAnimation(moon, "fadeOut");
-    playAnimation(sun, "fadeIn");
-
-    moon.classList.remove("visible");
-      setTimeout(() => {
-
-    sun.classList.add("visible");
-      }, 1000);
+    playAnimation(moon, "fadeOutMoon");
+    setTimeout(() => {
+      moon.classList.remove("visible");
+      sun.classList.add("visible");
+      playAnimation(sun, "fadeIn");
+    }, 1000);
   }
 
 
     const toggleLabel = document.getElementById("toggleLabel");
     if (!toggleLabel.dataset.original) {
-        toggleLabel.dataset.original = toggleLabel.innerHTML;
-    }
-    if (toggleLabel.innerHTML === "Dunkel") {
+  setTimeout(() => {
+    toggleLabel.dataset.original = toggleLabel.innerHTML;
+
+    toggleLabel.style.opacity = 0;
+
+    setTimeout(() => {
+      toggleLabel.innerHTML = "Dunkel";
+      toggleLabel.style.opacity = 1;
+    }, 500); // Warte, bis das Ausblenden abgeschlossen ist
+  }, 1000);
+} else {
+  setTimeout(() => {
+    toggleLabel.style.opacity = 0;
+
+    setTimeout(() => {
+      if (toggleLabel.innerHTML === "Dunkel") {
         toggleLabel.innerHTML = toggleLabel.dataset.original;
-    } else {
+      } else {
         toggleLabel.innerHTML = "Dunkel";
-        moon.style.marginTop= "40px";
-    }
+      }
+      toggleLabel.style.opacity = 1;
+    }, 500);
+  }, 1000);
+}
+
     const isFuturistic = document.body.classList.contains('futuristic');
     document.body.classList.toggle('futuristic');
 
