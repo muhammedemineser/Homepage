@@ -205,12 +205,17 @@ body.futuristic #shortBackstory {
   font-size: 1.3rem;
 }
 
+#shortBackstory a {
+  white-space: nowrap;
+  margin: auto;
+  margin-right: 10%;
+}
+
 
 #skipSymbol {
   display: inline-block;
-  width: auto;
+  width: 2rem;
   height: 2rem;
-  overflow: hidden;
   aspect-ratio: 1 / 1;
   pointer-events: none;
   color: var(--grey);
@@ -222,15 +227,17 @@ body.futuristic #shortBackstory {
 @keyframes skipper {
   0% {
     transform: translateX(0);
+    animation-timing-function: ease-in;
   }
   50% {
-    transform: translateX(10px);
+    transform: translateX(20px);
+    animation-timing-function: ease-out;
   }
-
   100% {
     transform: translateX(0);
   }
 }
+
 
 .cartoonContainer {
     display: flex;
