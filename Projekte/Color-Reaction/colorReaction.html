@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Reaction Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="colorReaction.css">
+  <script src="colorReaction.js" defer></script>
+  <script src="../../script.js" defer></script>
+</head>
+<body>
+  <div class="background-blobs">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">Mee Studios</div>
+      <nav class="site-nav" id="navbar">
+        <a href="../../index.html#home">Startseite</a>
+        <a href="../../index.html#about">Über mich</a>
+        <a href="../../index.html#work">Arbeit</a>
+        <a href="../../index.html#contact">Kontakt</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle"><i class="fas fa-bars"></i></button>
+      <button class="theme-toggle" id="themeToggle"><i class="fas fa-bolt"></i></button>
+    </div>
+  </header>
+  <main class="container portfolio-item">
+    <h1>Farbreaktionsspiel – Ein Game mit Backstory</h1>
+    <section style="margin-top: 5%;">
+      <div style="width: 80vw; height: 80vh; display: flex; justify-content: center; align-items: center; margin: 0 auto; position: relative;">
+      <iframe 
+        src="https://muhammedemineser.github.io/colorReaction/" 
+        style="position: absolute; width: 80vw; height: 80vh; border: none; border-radius: 5%; display: flex; justify-content: center; align-items: center; margin: 0 auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+      </iframe>
+        <a href="https://muhammedemineser.github.io/colorReaction/" target="_blank"
+     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></a>
+      </div>
+    </section>
+    <section>
+      <h2>Hintergrund der Idee</h2>
+      <p>In meinem Sport-Leistungskurs (Q1) haben wir uns intensiv mit den Grundlagen der Bewegungswissenschaft beschäftigt. Themen wie neuronale Prozesse (Afferenzen und Efferenzen), Sensorik und Rezeptoren sowie Reaktionszeiten, Reflexe und bewusste Bewegungsprogramme standen auf dem Plan. Ich war fasziniert von diesen Inhalten – insbesondere davon, wie unser Nervensystem Reize verarbeitet und wie schnell wir auf externe Stimuli reagieren können.</p>
+      <p>Aus dieser Faszination entstand die Idee, ein eigenes Farbreaktionsspiel zu entwickeln. Ich wollte das theoretische Wissen über Reaktionsfähigkeit und motorische Programme in die Praxis übertragen und erlebbar machen. Zur selben Zeit begann ich, mich intensiv mit der Programmierung in JavaScript zu beschäftigen. Die Kombination aus sportwissenschaftlicher Theorie und meinem neuen Programmierwissen brachte mich schließlich auf den Plan, ein solches Spiel eigenständig zu bauen – eine perfekte Gelegenheit, meine Kenntnisse in beiden Bereichen zu verbinden.</p>
+    </section>
+
+    <section>
+      <h2>Projektstart und Umsetzung</h2>
+      <p>In meiner Freizeit begann ich, die Idee in die Tat umzusetzen. Es war mein erstes großes JavaScript-Projekt mit einem Umfang von mehreren tausend Zeilen Code – entsprechend groß waren die Herausforderungen, an denen ich jedoch mit viel Ehrgeiz gewachsen bin. Schritt für Schritt entwickelte ich die Spielmechanik, das Design und sämtliche Funktionen von Grund auf selbst.</p>
+      <p>Dabei kamen HTML, CSS und vor allem viel Vanilla JavaScript zum Einsatz, um ein dynamisches, interaktives Browser-Game zu schaffen. Sogar die Anbindung einer externen Web-API habe ich integriert, um Spielstände und Nutzerdaten persistent speichern und abrufen zu können. Durch konsequentes Lernen, Debugging und Ausprobieren überwand ich alle Hürden – vom Umgang mit komplexer Logik bis zur Feinabstimmung der Benutzeroberfläche. Nach und nach nahm das Spiel Form an, bis ich es schließlich erfolgreich fertigstellen konnte.</p>
+    </section>
+
+    <section>
+      <h2>Spielablauf und Features</h2>
+      <p>Das fertige Spiel überzeugt durch zahlreiche Features und ein durchdachtes Nutzererlebnis. Hier ein Überblick über den Spielablauf und die wichtigsten Funktionen:</p>
+      <p><strong>Anmeldung &amp; Personalisierung:</strong> Beim Start werden die Spieler begrüßt und können sich optional anmelden. Man gibt einen Namen ein (oder bleibt anonym) sowie Alter und Geschlecht, bevor es losgeht. Diese Informationen erlauben personalisierte Statistiken, ohne dass die Eingabe verpflichtend ist – wer möchte, kann auch ohne Registrierung spielen.</p>
+      <p><strong>Mehrsprachigkeit:</strong> Die Benutzeroberfläche lässt sich nahtlos von Deutsch auf Englisch umstellen, damit auch anderssprachige Nutzer problemlos spielen können. Alle Texte, Buttons und Meldungen des Spiels sind zweisprachig angelegt. Durch diese Offenheit ist das Spiel einem breiteren Publikum zugänglich.</p>
+      <p><strong>Rundenbasiertes Reaktionsspiel:</strong> Das Spiel läuft in schnellen Runden ab – mit jeweils 10 Farben pro Durchgang. In jeder Runde erscheint eine Folge von Farben, die der Spieler erkennen und so schnell wie möglich eintippen muss. Dadurch wechselt der vorerst unbekannte Reiz über die Runden zunächst zu einem bekannten Reiz – eine zunehmende Herausforderung für Reaktionsfähigkeit und Kurzzeitgedächtnis. Was anfangs simpel klingt, erfordert mit jeder weiteren Runde mehr Konzentration, Durchhaltevermögen und flinken Verstand.</p>
+      <p><strong>Echtzeit-Feedback:</strong> Das Spiel gibt unmittelbare Rückmeldungen zu jeder Eingabe. Bei korrekter Eingabe leuchtet eine Anzeige blau auf, und ein passender Bestätigungston erklingt (ein kurzes "Bing"). Bei falscher Eingabe hingegen signalisiert ein roter Hinweis zusammen mit einem Fehlerton den Irrtum. Außerdem wird das Texteingabefeld bei einem Tippfehler automatisch geleert, damit man ohne Verzögerung einen neuen Versuch starten kann. Diese Echtzeit-Feedbacks erhöhen die Usability und halten den Spielfluss aufrecht, da der Spieler sofort aus seinem Fehler lernt und weiter spielen kann, ohne erst manuell löschen zu müssen.</p>
+      <p><strong>Punktesystem &amp; Statistik:</strong> Die Leistung wird pro Durchgang in Punkten gemessen – je schneller und fehlerfreier die Eingaben erfolgen, desto höher fällt der Score aus. Am Ende einer Spielsession zeigt das Spiel ausführliche Statistiken an: die persönliche Bestzeit (schnellste Reaktionszeit), die durchschnittliche Reaktionszeit auf bekannte und unbekannte Reize, die Gesamtpunktzahl (korrekter Eingaben) und die Leistungsentwicklung wird durch ein Diagramm dargestellt, das ich durch Chart.js erstellt habe. Diese Transparenz motiviert die Spieler, sich stetig zu verbessern, da man schwarz auf weiß seine Performance sehen und bei erneutem Spielen übertreffen kann.</p>
+      <p><strong>Rangliste &amp; Wettbewerbsgeist:</strong> Ein besonderes Feature ist die globale Bestenliste. Nach jedem Spiel werden die neuen Ergebnisse mit den bestehenden Einträgen aller Spieler verglichen. Die aktuellen Top 3-Spieler mit den höchsten Scores werden am Ende für alle sichtbar angezeigt. Schafft man es selbst unter die Top 3, erscheint der eigene Name dauerhaft in dieser Rangliste. Falls nicht, bekommt man stattdessen die eigene Platzierung mitgeteilt (z.B. "Platz 5") und als Vergleichswerte wie die Punktzahlen der Top 3 Ränge aussehen. Diese Wettbewerbs-Komponente spornt enorm an: Jeder möchte natürlich gern aufsteigen und seinen Namen auf der Bestenliste sehen. Die Rangliste erhöht so den langfristigen Spielspaß und sorgt für motivierendes Kräftemessen zwischen den Nutzern.</p>
+      <p><strong>Responsive UI &amp; Eingabekomfort:</strong> Das Spiel wurde im Mobile-First-Ansatz entwickelt und ist vollständig responsive – es funktioniert genauso reibungslos auf dem Smartphone wie am PC oder Tablet. Die Steuerung ist intuitiv gestaltet: Mobilgeräte nutzen Bildschirmbuttons oder die Eingabetaste, während man am Desktop wahlweise Buttons anklicken oder einfach die Leertaste als Schnellzugriff zum Bestätigen der Eingabe verwenden kann. Für zusätzlichen Komfort passt sich das Interface an verschiedene Bildschirmgrößen an, ohne an Übersichtlichkeit einzubüßen. Das Design ist bewusst schlicht-elegant gehalten: Eine einheitliche Farbgestaltung und eine dezente animierte Hintergrundgrafik sorgen für eine ansprechende Ästhetik, ohne vom eigentlichen Spielgeschehen abzulenken.</p>
+    </section>
+
+    <section>
+      <h2>Wissenschaftlicher Nutzen der Spieldaten</h2>
+      <p>Einer der spannendsten Aspekte des Projekts ist der potenzielle wissenschaftliche Mehrwert der gesammelten Spieldaten. Da jeder Nutzer (auf Wunsch anonymisiert) sein Alter und Geschlecht angibt und das Spiel präzise Leistungskennzahlen erfasst, ergeben sich interessante Möglichkeiten zur Analyse. Langfristig ließe sich aus den Daten einiges über das menschliche Reaktionsvermögen und kognitive Entwicklungen lernen:</p>
+      <p><strong>Reaktionszeit-Analysen:</strong> Wie verändern sich Reaktionszeiten in Abhängigkeit von Alter und Geschlecht? Das Farbreaktionsspiel kann dazu beitragen, diese Frage zu beleuchten. Beispielsweise ließe sich überprüfen, ob jüngere Spieler im Schnitt tatsächlich schneller reagieren als ältere – oder ob eventuell der Unterschied zwischen männlichen und weiblichen Spielern geringer ist als erwartet. Solche Auswertungen liefern Einblicke in alters- und geschlechtsspezifische Unterschiede in der Kognition und Motorik, die im Sportunterricht theoretisch besprochen wurden.</p>
+      <p><strong>Lerneffekt &amp; Metakognition:</strong> Durch die wiederholten Runden mit gleicher Farbreihenfolge lässt sich beobachten, wie Spieler mit Übung besser werden (Stichwort Lerneffekt). Bekannte Reize werden von Runde zu Runde schneller erkannt als neue – ein praktisches Beispiel für ein generalisiertes motorisches Programm und das Wiedererkennungsschema aus der Bewegungslehre. Zudem erlaubt das Spiel einen Blick auf die Selbsteinschätzung der Spieler: Oft glaubt man, besonders schnell oder gut zu sein, doch erst der Datenvergleich mit anderen oder mit den eigenen vorherigen Leistungen zeigt die Realität. Diese Form von Metakognition – also das Wissen über das eigene Können – wird durch die unmittelbare Rückmeldung und die Rangliste gefördert. So merkte z.B. mein Freund anfangs an, er sei "der Beste", erkannte aber durch die Rangliste, dass noch Luft nach oben war. Solche Erkenntnisse über Diskrepanzen zwischen Gefühl und Fakt sind ungemein lehrreich.</p>
+      <p><strong>Aufmerksamkeitsspanne-Trends:</strong> Mit einer großen Datenbasis könnte das Spiel langfristig auch dazu genutzt werden, Veränderungen in der allgemeinen Aufmerksamkeitsspanne der Nutzer zu verfolgen. In Zeiten von TikTok &amp; Co. wird oft diskutiert, dass die Aufmerksamkeitsspanne der Menschen immer kürzer wird. Wenn man über Jahre hinweg die durchschnittlichen Reaktionszeiten oder Fehlerraten der Spielerschaft auswertet, könnte man tatsächlich Hinweise darauf finden, ob jüngere Generationen ungeduldiger werden oder ob regelmäßiges kognitives Training (wie durch solche Spiele) die Aufmerksamkeit wieder steigern kann. Das Spiel liefert damit einen indirekten Beitrag zu aktuellen gesellschaftlichen Fragen der Mediennutzung und Kognition.</p>
+      <p><strong>Spielerisch Wissenschaft erleben – Freude am Forschen wecken:</strong> Gerade diese Verbindung von Spiel, persönlicher Leistung und wissenschaftlicher Relevanz macht das Farbreaktionsspiel so besonders: Es zeigt, dass wissenschaftliche Erkenntnisse nicht trocken oder abstrakt sein müssen, sondern direkt erfahrbar – mit Spaß, Wettbewerb und Neugier.</p>
+      <p>Statt trockener Fragebögen oder standardisierter Labortests lernen die Nutzer durch das Spiel, was hinter Begriffen wie Reaktionszeit, Metakognition oder motorischem Programm steckt – sie spüren es am eigenen Körper und Geist. Dabei entsteht fast nebenbei ein Bewusstsein für wissenschaftliches Denken: Hypothesen formulieren („Bin ich wirklich so schnell?“), Daten sammeln (durch das Spiel), vergleichen, reflektieren und interpretieren.</p>
+      <p>Besonders spannend ist, dass dieses Spiel nicht nur Wissen vermittelt, sondern gleichzeitig Daten produziert, die für echte Auswertungen nutzbar sind – etwa für Projekte im Sportunterricht, für kleine Schulstudien oder sogar für größere Forschungsreihen zur kognitiven Entwicklung in digitalen Zeiten.</p>
+      <p>So wird deutlich:</p>
+      <p>Forschung muss nicht immer im Labor stattfinden – sie kann auch im Klassenzimmer, im Wohnzimmer oder auf dem Smartphone beginnen.</p>
+      <p>Das Farbreaktionsspiel zeigt eindrucksvoll, wie man mit spielerischen Mitteln Lust an der Wissenschaft fördern, Erkenntnisse greifbar machen und dabei sogar gesellschaftlich relevante Fragen erforschen kann. Ein Beispiel dafür, wie Lernen, Technologie und Kreativität zusammenkommen – und wie man Menschen ganz praktisch zum Denken anregt.</p>
+    </section>
+
+    <section>
+      <h2>Feinschliff durch Feedback</h2>
+      <p>Mein Entwicklungsprozess war iterativ angelegt: Ich habe mir regelmäßig Feedback aus meinem Umfeld eingeholt, um das Spielerlebnis zu optimieren. Zwei Beispiele zeigen, wie aus Rückmeldungen konkrete Verbesserungen wurden:</p>
+      <p><strong>Informationsdarstellung:</strong> Ursprünglich begrüßte die Startseite die Spieler mit einem ausführlichen Erklärungstext. Mein großer Bruder wies mich jedoch darauf hin, dass jemand, der ein Spiel startet, eher sofort losspielen will und von zu viel Text eventuell abgeschreckt wird. Diese Einsicht war goldwert: Ich habe den einst seitenlangen Infotext in kompakte, ausklappbare Dropdown-Menüs verwandelt. Wichtige Hintergrundinfos und Anleitungen sind jetzt in Form von kleinen Info-Kacheln verfügbar, die sich bei Bedarf öffnen lassen. Spieler, die gerne Details lesen, können dies tun – alle anderen werden nicht durch Textmassen vom direkten Spieleinstieg abgehalten. Diese Änderung hat die User Experience deutlich verbessert, da das Spiel nun aufgeräumter wirkt und unterschiedlichen Nutzertypen gerecht wird.</p>
+      <p><strong>Wettkampf &amp; Motivation:</strong> Ein Schulfreund rief nach einem Testlauf begeistert: "Ich bin der Beste!" – wusste aber gar nicht, ob das stimmte, da er nur seine eigene Punktzahl kannte. Dieses Feedback hat mich auf die goldene Idee gebracht, eine Bestenliste einzubauen. Durch die Implementierung der Rangliste kann nun jeder Spieler seine Leistung mit anderen vergleichen und sofort sehen, wo er steht. Mein Freund konnte so z.B. erkennen, dass er zwar sehr gut, aber nicht der absolut Beste war – was ihn im nächsten Durchgang nur noch mehr angespornt hat. Diese Ergänzung hat den Wettbewerbscharakter des Spiels enorm erhöht. Insgesamt haben solche gezielten Verbesserungen aus Nutzer-Feedback das Spiel von einer einfachen Idee zu einem ausgereiften Produkt reifen lassen, das auf die Bedürfnisse der Spieler abgestimmt ist.</p>
+    </section>
+
+    <section>
+      <h2>Präsentation im Leistungskurs Sport</h2>
+      <p>Den Höhepunkt fand das Projekt, als ich mein Farbreaktionsspiel im Sportunterricht vorstellte. Mein Lehrer war sofort begeistert von meinem Vorschlag, das Spiel gemeinsam mit dem Sport-Leistungskurs auszuprobieren. Also bereitete ich eine kleine Präsentation vor. Zunächst erklärte ich der Klasse den Hintergrund und Zweck des Spiels – warum Reaktionsschnelligkeit wichtig ist, wie das Spiel funktioniert und welche Theorie aus unserem Unterricht dahintersteckt. Anschließend projizierte ich per Apple TV einen QR-Code an die Tafel, über den alle Mitschüler das Spiel auf ihren eigenen Smartphones und Schul-IPads laden und starten konnten.</p>
+      <p>Das Klassenzimmer verwandelte sich augenblicklich in ein digitales Spiellabor: Alle Schüler tippten hochkonzentriert und wie wild auf ihren Displays, um die Farbfolgen so schnell wie möglich einzugeben. Es war für mich ein unglaublicher Moment, mein selbst entwickeltes Spiel in den Händen so vieler Nutzer gleichzeitig zu sehen. Stolz beobachtete ich, wie mein Projekt die ganze Klasse begeisterte und für spürbaren Ehrgeiz und Spaß sorgte. Ich habe an diesem Tag bewiesen, dass ich nicht nur in der Lage bin, ein komplexes digitales Produkt zu entwickeln, sondern es auch mitreißend präsentieren kann. In der abschließenden Feedback-Runde zeigte sich die Klasse durchweg beeindruckt; viele betonten, wie viel Spaß das Spiel gemacht hat. Für mich als Entwickler und angehenden UX-Designer war das ein riesiges Erfolgserlebnis und die beste Bestätigung dafür, dass sich harte Arbeit und Kreativität auszahlen.</p>
+    </section>
+
+    <section>
+      <h2>Fazit: Meine Lernkurve und Kompetenzen</h2>
+      <p>Durch dieses Projekt konnte ich eine Vielzahl von Fähigkeiten und Kompetenzen unter Beweis stellen:</p>
+      <p><strong>Frontend-Entwicklung:</strong> Ich habe fundierte Kenntnisse in HTML, CSS und JavaScript demonstriert – von DOM-Manipulation und Event-Handling bis hin zur asynchronen Datenverarbeitung mit einer externen API. Außerdem habe ich Konzepte wie Responsive Design und Browser-Kompatibilität praktisch umgesetzt, indem das Spiel auf verschiedensten Endgeräten einwandfrei läuft.</p>
+      <p><strong>UX-Design &amp; Usability:</strong> Bei der Gestaltung des Spiels stand stets der Nutzer im Mittelpunkt. Ich habe Wert auf ein klares, konsistentes Layout, intuitive Bedienbarkeit und visuelles als auch akustisches Feedback gelegt. Features wie das sofortige Anzeigen von Erfolgen/Fehlern, optional einblendbare Info-Texte, Mehrsprachigkeit und motivierende Elemente (Soundeffekte, Animationen, Rangliste) zeigen Verständnis für gute User Experience und Benutzerfreundlichkeit.</p>
+      <p><strong>Wissenschaftliches Denken:</strong> Die inhaltliche Konzeption des Spiels basiert auf sportwissenschaftlichen und psychologischen Erkenntnissen. Ich habe theoretisches Wissen aus dem Unterricht (über Reaktionszeiten, motorische Programme, Kognition etc.) genommen und in ein greifbares, interaktives Produkt übertragen. Dieses interdisziplinäre Arbeiten – die Verbindung von Lernen und Spaß – spiegelt meine Fähigkeit wider, komplexe Zusammenhänge innovativ zu nutzen.</p>
+      <p><strong>Kommunikation &amp; Teamwork:</strong> Obwohl ich das Spiel eigenständig programmiert habe, war der Entwicklungsprozess durch ständigen Austausch geprägt. Ich habe aktiv Feedback von Familie, Freunden und Lehrern eingeholt und konstruktiv umgesetzt. Die erfolgreiche Präsentation vor der Klasse hat zudem gezeigt, dass ich komplexe Inhalte verständlich vermitteln kann. Insgesamt beweist das Projekt, dass ich im Team und mit Nutzern offen kommuniziere und iterative Verbesserungen willkommen heiße – essentielle Soft Skills in der Produktentwicklung.</p>
+      <p><strong>Kreativität &amp; Problemlösung:</strong> Von der ersten Idee bis zum fertigen Produkt zeugt das Projekt von meiner Kreativität und meinem Durchhaltevermögen. Ich habe aus dem Nichts ein komplettes Spiel erschaffen und für jede neue Herausforderung (sei es ein technisches Problem oder ein Feature-Wunsch) eigenständige Lösungen gefunden. Diese Erfahrung hat mir gezeigt, wie ich aus einer Vision durch iterative Verbesserungen ein funktionierendes und begeisterndes Produkt formen kann.</p>
+      <p>Zusammenfassend bin ich sehr stolz auf dieses Projekt. Mein Farbreaktionsspiel vereint Technik, Design und Wissenschaft – und es demonstriert meine Fähigkeit, eigeninitiativ innovative Lösungen zu entwickeln und andere dafür zu begeistern. Diese Erfahrung bestärkt mich in meinem Berufswunsch im Bereich UX-Design und Frontend-Entwicklung. Ich freue mich darauf, die hierbei gewonnenen Fähigkeiten und Erkenntnisse in zukünftige Projekte einzubringen und mich weiterhin kreativ auszuleben.</p>
+      <p>Darüber hinaus konnte ich mir durch die Arbeit am Farbreaktionsspiel folgende weiterführende Kompetenzen aneignen:</p>
+        <ul>
+          <li>strukturierte Code-Organisation mittels Funktionen und Objekten zur klaren Trennung von Spiel-Logik und UI</li>
+          <li>fortgeschrittene Nutzung von <code>fetch</code>, Promises und <code>async\/await<\/code> für den Datenaustausch mit einer Web-API</li>
+          <li>Speichern und Verarbeiten von Spielständen über <code>localStorage<\/code> sowie JSON-basierte Schnittstellen</li>
+          <li>performante Animationen durch <code>requestAnimationFrame<\/code> und <code>IntersectionObserver<\/code></li>
+          <li>Visualisierung komplexer Statistiken mit Chart.js und individuellem Diagramm-Design</li>
+          <li>responsives Layout auf Basis von Flexbox, Grid und gezielten Media Queries</li>
+          <li>gezieltes Debugging und Performance-Tests mithilfe der Browser-Developer-Tools</li>
+          <li>Wiederverwendbarkeit durch modulare Komponenten und Versionsverwaltung</li>
+          <li>agiles Arbeiten und iterative Verbesserungen auf Basis von Nutzerfeedback</li>
+          <li>verstärkte Präsentationsfähigkeiten beim Erklären komplexer technischer Inhalte</li>
+        </ul>
+    </section>
+    <section id="postLaunchResearch" style="padding: 4rem 2rem; background: #f9f9f9; border-top: 2px solid #e0e0e0;">
+  <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 2rem;">🎮 Post-Launch Feedback & pädagogischer Einsatz</h2>
+  
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; max-width: 1200px; margin: 0 auto;">
+    
+    <!-- Linke Seite: Visuelle Darstellung (Feedback Bubbles) -->
+    <div>
+      <div style="background: white; padding: 1.2rem 1.5rem; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); margin-bottom: 1.5rem;">
+        <strong>🧍‍♂️ Schüler-Feedback:</strong><br>
+        „Ich hab gar nicht gedacht, dass das dein eigenes Spiel ist – das ist richtig professionell gemacht!“
+      </div>
+
+      <div style="background: #fff; padding: 1.2rem 1.5rem; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); margin-bottom: 1.5rem;">
+        <strong>🏫 Lehrerreaktion:</strong><br>
+        „Starke Idee! Ich bin wirklich beeindruckt, wie du Theorie aus dem Unterricht in ein Spiel übertragen hast.“
+      </div>
+
+      <div style="background: #e9f6ee; padding: 1.2rem 1.5rem; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border-left: 4px solid #00c37a;">
+        <strong>👨‍👦 Feedback aus dem Umfeld:</strong><br>
+        „Du hast nicht nur ein Spiel gebaut – du hast was Lehrreiches und Spaßiges verbunden. Das kann richtig groß werden.“
+      </div>
+    </div>
+
+    <!-- Rechte Seite: Zusammenfassung als Text -->
+    <div>
+      <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">UX-Forschung, Motivation & reale Anwendung</h3>
+      <ul style="font-size: 1.1rem; line-height: 1.7;">
+        <li>Ich habe das Spiel im Sport-Leistungskurs live vorgestellt, inklusive QR-Code und interaktivem Spielen durch die ganze Klasse.</li>
+        <li>Das Nutzerfeedback war spontan, ehrlich und extrem positiv – viele wollten direkt mehrere Durchgänge spielen.</li>
+        <li>UX-Elemente wie Sounds, Rangliste und mobile Optimierung sorgten für Motivation und Wettbewerbsgeist.</li>
+        <li>Rückmeldungen wie „zu viel Text“ habe ich produktiv aufgenommen und in animierte Dropdowns umgewandelt.</li>
+        <li>Mein Lehrer lobte die Brücke zwischen Theorie und Praxis und zeigte Interesse, das Spiel langfristig im Unterricht einzusetzen.</li>
+      </ul>
+
+      <p style="margin-top: 1.5rem; font-style: italic; color: #555;">
+        Das Projekt hat gezeigt, wie man durch kreative UX-Entwicklung wissenschaftliche Inhalte spielerisch vermitteln kann – und gleichzeitig echte Begeisterung auslöst.
+      </p>
+
+      <a href="reflexion.html" style="display: inline-block; margin-top: 2rem; background: #222; color: white; padding: 0.8rem 1.6rem; border-radius: 8px; text-decoration: none; font-weight: bold;">🔍 Weiter zu: Reflexion & Erkenntnisse</a>
+    </div>
+  </div>
+</section>
+  </main>
+</body>
+</html>

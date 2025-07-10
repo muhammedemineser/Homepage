@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine Fähigkeiten im Code</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        .hero { height: auto; background: none; }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .skill-box {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 4px;
+        }
+        .skill-box code {
+            display: block;
+            background: #222;
+            color: #fff;
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body class="demo-3">
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">Mee Studios</div>
+            <nav class="site-nav">
+                <a href="index.html">Zurück</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Meine Fähigkeiten im Code</h1>
+        </div>
+    </section>
+
+    <section class="section in-view">
+        <div class="container">
+            <div class="skills-grid">
+                <div class="skill-box">
+                    <h3><i class="fas fa-layer-group"></i> Strukturierte HTML-Layouts</h3>
+                    <p>Semantische Bereiche und klare Navigation bilden das Grundgerüst.</p>
+                    <code>&lt;nav class="site-nav" id="navbar"&gt;...&lt;/nav&gt;</code>
+                </div>
+                <div class="skill-box">
+                    <h3><i class="fas fa-paint-brush"></i> Modernes CSS &amp; Animationen</h3>
+                    <p>Keyframes sorgen für dynamische Hintergründe.</p>
+                    <code>.background-blobs span:nth-child(1) { animation: blob1 35s infinite; }</code>
+                </div>
+                <div class="skill-box">
+                    <h3><i class="fas fa-bolt"></i> JavaScript Interaktivität</h3>
+                    <p>Event-Handling und sanftes Scrollen verbessern die Nutzerführung.</p>
+                    <code>anchor.addEventListener('click', e =&gt; target.scrollIntoView({behavior:'smooth'}));</code>
+                </div>
+                <div class="skill-box">
+                    <h3><i class="fas fa-database"></i> API-Nutzung &amp; Daten</h3>
+                    <p>Spielstände werden via Fetch gespeichert und mit Chart.js visualisiert.</p>
+                    <code>fetch('https://683dbe19199a0039e9e6b6d6.mockapi.io/scores', {method:'POST'})</code>
+                </div>
+                <div class="skill-box">
+                    <h3><i class="fas fa-mobile-alt"></i> Responsive &amp; zugänglich</h3>
+                    <p>Media Queries und Alt-Texte machen die Seiten mobilfreundlich.</p>
+                    <code>@media (max-width:768px) { .site-nav { display:none; } }</code>
+                    <code>&lt;img id="beforeImg" src="vorher.jpg" alt="Vorher-Bild"&gt;</code>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

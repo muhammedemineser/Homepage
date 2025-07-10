@@ -1,0 +1,31 @@
+/*anime.js */
+.layers {
+  width: 100vw;
+  height: 100vh;
+  position: sticky;
+  perspective: 1000px;
+  overflow-x: hidden;
+}
+
+.layer {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  overflow-x: hidden;
+
+    background-color:  rgba(90, 90, 90, 0.651);
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.layer2 {
+    background: rgba(255, 255, 255, 0.1);
+  transform: translate(-50%, -50%) translateZ(-30px);
+}
+
+.layer3 {
+    background: rgba(0,0,0,0.5);
+  transform: translate(-50%, -50%) translateZ(-60px);
+}

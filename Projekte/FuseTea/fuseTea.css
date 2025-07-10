@@ -1,0 +1,860 @@
+@font-face {
+  font-family: "Comic";
+  src: url("fonts/RifficFree-Bold.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url("fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+
+
+@font-face {
+  font-family: "montserratItalic";
+  src: url("fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "fredoka";
+  src: url("fonts/Fredoka/Fredoka-VariableFont_wdth\,wght.ttf") format("truetype");
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  display: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+    display: none;
+}
+:root {
+    --grey: #b4b0bd;
+}
+
+
+#ueberschrift {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "montserrat", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+    margin: 0;
+  padding: 0;
+}
+
+
+#projectGoal {
+  display: flex;
+  align-items: center;
+  color: var(--grey);
+  width: 90vw;
+  font-size: 2.2rem;
+  font-weight: 600;
+  font-family: "montserrat", sans-serif;
+  margin: 8% 10% 2% 10%;
+  height: 7vh;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  color: var(--grey);
+  width: 90vw;
+  font-size: 2.2rem;
+  font-weight: 600;
+  font-family: "montserrat", sans-serif;
+  margin: 8% 10% 2% 10%;
+  height: 7vh;
+}
+
+.revertMargin {
+  margin: 8% 10% 2% 10% !important;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  color: var(--grey);
+  width: 90vw;
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: "montserrat", sans-serif;
+  margin: 3% 10% 0% 10%;
+  height: 7vh;
+}
+
+h4 {
+  display: inline-block;
+  color: var(--grey);
+  font-size: 2.2rem;
+  font-weight: 600;
+  font-family: "montserrat", sans-serif;
+}
+
+#projectDescription {
+  display: flex;
+  align-items: center;
+  width: 90vw;
+  height: 10vh;
+  margin: 0 auto;
+  font-size: 2.2rem;
+  font-family: "montserrat", sans-serif;
+  margin: 0px 10% 10% 10%;
+}
+
+#meineTools {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "montserrat", sans-serif;
+  color: var(--grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+
+.toolSet {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  margin: auto;
+}
+
+.toolGrid {
+  margin-bottom: 10%;
+}
+
+
+.label {
+  font-family: "montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;  
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.toolItem {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.toolSet img {
+  width: 7rem;
+  margin: 50px;
+  border-radius: 20px;
+}
+
+
+body:not(.futuristic) #shortBackstory {
+  font-family: "fredoka", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 900;
+  font-size: 1.9rem;
+  color: lightblue;
+  text-shadow: 2px 5px 0px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  position: relative;
+    display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+body.futuristic #shortBackstory {
+  font-family: "fredoka", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 900;
+  font-size: 1.9rem;
+  color: rgba(175, 120, 214, 0.8);
+  text-shadow: 2px 5px 0px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  position: relative;
+    display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+.skip-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--grey);
+  text-decoration: none;
+  gap: 0.5rem;
+  margin-left: auto;
+  margin-right: 0;
+  transition: 0.5s ease;
+  font-size: 1.3rem;
+}
+
+
+#skipSymbol {
+  display: inline-block;
+  width: auto;
+  height: 2rem;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  pointer-events: none;
+  color: var(--grey);
+  animation: skipper 1s linear infinite;
+  will-change: transform;
+  margin-right: 10%;
+}
+
+@keyframes skipper {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.cartoonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: fit-content;
+    width: auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20%;
+}
+
+.cartoonContainer > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 30vh;
+    border-radius: var(--borderRadius);
+    font-size: 1.2rem;
+    font-family: "Comic", sans-serif;
+    flex-shrink: 1;
+}
+
+
+
+body:not(.futuristic) .textPicCartoon {
+    display: flex;
+    flex-direction: row;
+    height: 90%;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    letter-spacing: 2px;
+    margin: 1%;
+    overflow-wrap: break-word; /* Lässt lange Wörter umbrechen */
+    word-wrap: break-word;     /* Fallback für ältere Browser */
+    overflow: hidden;          /* Verhindert, dass etwas überläuft */
+    background-color: white;
+    margin-top: 3px;
+    animation: containerShadow 0.3s ease 0.3s 1 normal forwards;
+}
+
+@keyframes containerShadow {
+  0% {
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 15px 15px #d0e8ff;
+  }
+}
+
+body.futuristic .textPicCartoon {
+    display: flex;
+    flex-direction: row;
+    height: 90%;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    letter-spacing: 2px;
+    margin: 1%;
+    overflow-wrap: break-word; /* Lässt lange Wörter umbrechen */
+    word-wrap: break-word;     /* Fallback für ältere Browser */
+    overflow: hidden;          /* Verhindert, dass etwas überläuft */
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-top: 3px;
+    animation: containerShadowX 0.3s ease 0.3s 1 normal forwards;
+}
+
+@keyframes containerShadowX {
+  0% {
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 15px 15px rgba(175, 120, 214, 0.6);
+  }
+}
+
+
+span {
+  display: inline-block;
+}
+
+span.animation {
+  animation-name: cartoonCards;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes cartoonCards {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.cartoonText {
+  display: block; /* statt flex */
+  padding: 10%;
+  overflow-wrap: break-word;
+  white-space: pre-wrap; /* ← behält Zeilenumbrüche! */
+  line-height: 1.5;
+}
+
+body:not(.futuristic) .cartoonBilder img, #iconYasar {
+    display: flex;
+    max-height: 15rem;
+    margin-right: auto;
+    justify-content: center;
+}
+
+body.futuristic .cartoonBilder img {
+    display: flex;
+    max-height: 15rem;
+    margin-right: auto;
+    justify-content: center;
+    opacity: 0.8 !important;
+}
+
+.rollen {
+  display: flex;
+  flex-wrap:wrap;
+  color: var(--grey);
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: "montserrat", sans-serif;
+  margin: 3% 10% 3% 10%;
+}
+
+@media (max-width: 3000px) {
+  .rollen {
+  margin: 0 !important;
+  font-size: 1.2rem;
+  gap: 1rem !important;
+}
+
+  #workProcess {
+    margin-top: 40% !important;
+  }
+  .toolSet > .toolItem  {
+    display: flex !important;
+    flex-shrink: 8 !important;
+  }
+  #workProcess, #IA {
+    margin-left: 3% !important;
+  }
+  .processColumn {
+    margin-left: -10% !important;
+    flex-shrink: 3 !important;
+  }
+  .rollen.Sec :is(h1,h2) {
+    margin-left: 3% !important;
+  }
+  .rollen.Sec :is(ul, li) {
+    margin: 0 !important;
+  }
+  #evidence {
+    margin-top: 5% !important;
+  }
+  #evidence ul li {
+    all: unset !important;
+    gap: 10px !important;
+  }
+  #evidence p {
+    margin-left: 10% !important;
+    color: var(--grey) !important;
+  }
+}
+
+
+.rollen.Sec {
+  color: var(--grey);
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: "montserrat", sans-serif;
+}
+
+/* Overlay text on the skills background image */
+#skills-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin-left: 3%;
+}
+
+#skills-section > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+#skills-section > .rollen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 4.7rem;
+  margin: 0% 5% -5rem 5%;
+  z-index: 1;
+  width: 90vw;
+}
+
+.processColumn {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap:90px;
+  width: 80vw;
+  height: 100vh;
+  color: #333;
+  margin: auto;
+  padding: 30px;
+  border: 30px white;
+  border-radius: 30px;
+  margin-top: 10vh;
+}
+
+.beforeAfterIA li {
+  color: black;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.processColumn div {
+  display: inline-block;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-row1 {
+  grid-column: 1;
+}
+
+ul h3 {
+  min-height: 7.5rem;
+}
+
+.item-row2 {
+  grid-column: 2;
+}
+
+#IASection {
+  margin-left: 7%;
+}
+
+#IASection :is(div) {
+  width: fit-content;
+  height: fit-content;
+}
+
+.produktbilder-section {
+  display: flex;
+}
+
+#produktBilderVergleich * {
+  flex-wrap: wrap;
+}
+
+.productText * {
+  width: 90vw;
+}
+
+.productText h3, #empathyWrapper h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  min-height: 1rem; 
+  color: black;
+  line-height: 1.7;
+  font-size: 2.2rem;
+  margin-left: 3% !important;
+}
+
+.productText :is(p, ul li),#empathyGrid :is(ul li), #empathyWrapper :is(ul li) {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  min-height: 1rem; 
+  color: black;
+  line-height: 1.7;
+  font-size: 1.5rem;
+  margin-left: 3%;
+}
+
+.productText ul li  {
+  margin-left: 5% !important;
+}
+
+#empathyGrid ul li {
+  font-size: 1rem;
+}
+
+#empathyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin: 2rem auto;
+  border: #333 solid 5px;
+  max-width: 90%;
+  justify-content: center;
+  box-shadow: #333 5px 5px 10px, -5px -5px 10px #333;
+  position: relative;
+  overflow: hidden; /* Wichtig, damit das Pseudo-Element nicht überragt */
+}
+
+#empathyGrid::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("media/vieleFragezeichen.png");
+  background-position: center;
+  background-size: cover;
+  opacity: 0.3; /* Hier stellst du die Transparenz ein */
+  z-index: -1;
+}
+
+#empathyGrid .image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#empathyGrid img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+}
+
+#empathyGrid ul {
+  margin-right: 3%;
+}
+
+#empathyGrid ul li {
+  font-size: 1.3rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  line-height: 1.7;
+  color: black;
+  margin-left: 3%;
+    object-fit: contain;
+}
+
+
+.productText ul {
+  margin-top: 5%;
+}
+
+#empathyCardContainer, #visionCardContainer {  
+  display: block;
+  position: relative;
+  left: 50% ;
+    transform: translateX(-50%);
+  aspect-ratio: 1/1;
+  width: 60%;
+  z-index: 1;
+  margin-top: 10%;
+}
+
+.empathy-map, .vision-map {
+  display: none;
+  width: 100%;
+  border-radius: 16px;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.empathy-map.active, .vision-map.active {
+  display: block;
+  position: absolute;
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.empathy-map.enter-right, .vision-map.enter-right {
+  display: block;
+  position: absolute;
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.empathy-map.exit-left, .vision-map.exit-left {
+  display: block;
+  position: absolute;
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.nav-button, #prevVision, #nextVision {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.85);
+  border: none;
+  color: black;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover, #nextVision:hover, #prevVision:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.nav-button.left, #prevVision {
+  left: -20px;
+}
+
+.nav-button.right, #nextVision {
+  right: -20px;
+}
+
+#empathyGrid ul {
+  grid-template-columns: 2;
+  grid-template-rows: 1;
+}
+
+.twentytwenty-container {
+  margin-top: 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 100%;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  align-content: center;
+  height: auto;
+  margin: 0 auto;
+}
+
+.twentytwenty-before {
+  background-color: #fff;
+}
+
+.scroll-wrapper {
+  width: 100%;
+  height: 100vh; 
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: auto;
+  border-radius: 30px;
+  border: 6px solid black;
+    margin: 0 auto;
+}
+
+.scroll-wrapper {
+  overflow-y: auto;        /* stellt sicher, dass die Scrollbar erscheint */
+}
+
+/* WebKit-Browser (Chrome, Edge, Safari) */
+.scroll-wrapper::-webkit-scrollbar {
+  width: 15px;
+}
+
+.scroll-wrapper::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 15px;
+}
+/* Create a fade effect on the top and bottom of the scrollbar track using a linear-gradient background */
+.scroll-wrapper::-webkit-scrollbar-track {
+  background: linear-gradient(
+    to bottom,
+    rgba(240,240,240,0.03) 0%,
+    #f0f0f0 20%,
+    #f0f0f0 80%,
+    rgba(240,240,240,0.03) 100%
+  );
+  border-radius: 15px;
+}
+.scroll-wrapper::-webkit-scrollbar-thumb {
+  background-color: rgba(175, 120, 214, 0.6);
+  border-radius: 15px;
+  border: 2px solid #f0f0f0; /* für Padding-Effekt */
+}
+
+.scroll-wrapper::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(175, 120, 214, 0.6);
+}
+
+
+.twentytwenty-container img {
+  width: 100%;
+  height: auto;
+}
+
+.twentytwenty-wrapper {
+  margin:  0 auto;
+}
+
+#beforeAfterSection {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+
+.twentytwenty-handle {
+  top: var(--handle-top, 10%) !important;
+}
+
+.twentytwenty-before-label:before,
+.twentytwenty-after-label:before {
+  top: var(--label-top, 10%) !important;
+  background-color: #333 !important;
+  color: white !important;
+}
+
+
+.twentytwenty-overlay {
+  z-index: 32 !important;
+}
+
+#postLaunchResearch div strong {
+  font-family: "montserrat", sans-serif;
+  font-weight:600;
+  font-size: 1.2rem;
+  margin: 15px;
+}
+
+#postLaunchResearch div{
+  font-family: "montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+
+.sourcePics {
+  display: inline;
+height:auto; 
+  aspect-ratio: 1/1;
+  width: 150px;
+    white-space: nowrap;
+}
+
+body.futuristic .toolItem label {
+  margin: 20px;
+  color: white;
+}
+
+.toolItem label {
+  margin: 20px;
+}
+
+body.futuristic,
+body.futuristic h1,
+body.futuristic h2,
+body.futuristic h3,
+body.futuristic h4,
+body.futuristic h5,
+body.futuristic h6,
+body.futuristic p,
+body.futuristic li,
+body.futuristic .productText h3,
+body.futuristic #empathyWrapper h3,
+body.futuristic .productText :is(p, ul li),
+body.futuristic #empathyGrid :is(ul li),
+body.futuristic #empathyWrapper :is(ul li),
+body.futuristic #empathyGrid ul li,
+body.futuristic .rollen,
+body.futuristic .rollen.Sec,
+body.futuristic .label,
+body.futuristic .skip-link,
+body.futuristic .beforeAfterIA li {
+  color: white !important;
+}
+
+body:not(.futuristic),
+body:not(.futuristic) h1,
+body:not(.futuristic) h2,
+body:not(.futuristic) h3,
+body:not(.futuristic) h4,
+body:not(.futuristic) h5,
+body:not(.futuristic) h6,
+body:not(.futuristic) p,
+body:not(.futuristic) li,
+body:not(.futuristic) .productText h3,
+body:not(.futuristic) #empathyWrapper h3,
+body:not(.futuristic) .productText :is(p, ul li),
+body:not(.futuristic) #empathyGrid :is(ul li),
+body:not(.futuristic) #empathyWrapper :is(ul li),
+body:not(.futuristic) #empathyGrid ul li,
+body:not(.futuristic) .rollen,
+body:not(.futuristic) .rollen.Sec,
+body:not(.futuristic) .label,
+body:not(.futuristic) .skip-link,
+body:not(.futuristic) .cartoonText,
+body:not(.futuristic) .beforeAfterIA li {
+  color: black !important;
+}
+
+body:not(.futuristic) #postLaunchResearch,
+body:not(.futuristic) #postLaunchResearch [style*="background: #fff"],
+body:not(.futuristic) #postLaunchResearch [style*="background: #f9f9f9"] {
+  background: rgba(6, 6, 6, 0.1) !important;
+}
+
+body.futuristic #rueckblick {
+  background: white !important;
+  color: black !important;
+}
+
+body.futuristic #empathyMedia {
+  opacity: 0.8 !important;
+}

@@ -1,0 +1,83 @@
+@font-face {
+  font-family: "montserrat";
+  src: url("fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+
+
+@font-face {
+  font-family: "montserratItalic";
+  src: url("fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf") format("truetype");
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+}
+:root {
+    --grey: #b4b0bd;
+}
+
+h1 {
+      display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "montserrat", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+    margin: 5% 0 0 0;
+  padding: 0;
+}
+
+h2 {
+      display: flex;
+  align-items: center;
+  color: var(--grey);
+  width: 90vw;
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: "montserrat", sans-serif;
+  margin: 3% 10% 0% 10%;
+  height: 7vh;
+}
+
+p {
+      font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  min-height: 1rem; 
+  color: black;
+  line-height: 1.7;
+  font-size: 1.5rem;
+  margin-left: 3%;
+}
+
+ul li, #postLaunchResearch div strong {
+    font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  min-height: 1rem; 
+  color: black;
+  line-height: 1.7;
+  font-size: 1.5rem;
+  margin-left: 3%;
+}
+
+#postLaunchResearch ul li, #postLaunchResearch div {
+  font-size: 1rem;
+}
+
+#postLaunchResearch div div:not(strong) {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  min-height: 1rem; 
+  color: black;
+  line-height: 1.7;
+  font-size: 1.2rem;
+  margin-left: 3%;
+}

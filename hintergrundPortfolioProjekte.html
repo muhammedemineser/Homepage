@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mee Studios Portfolio</title>
+    <meta name="description" content="Persönliches Portfolio von Muhammed Emin Eser – UX/UI Design und Frontend-Entwicklung">    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">Mee Studios</div>
+            <nav class="site-nav" id="navbar">
+                <a href="#home">Startseite</a>
+                <a href="#about">Über mich</a>
+                <a href="#work">Arbeit</a>
+                <a href="#contact">Kontakt</a>
+            </nav>
+            <button class="nav-toggle" id="navToggle"><i class="fas fa-bars"></i></button>
+            <button class="theme-toggle" id="themeToggle"><i class="fas fa-bolt"></i></button>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hey, ich bin Muhammed Emin Eser</h1>
+            <p>UX/UI Designer & Frontend Entwickler</p>            
+            <a href="#work" class="btn" style="padding:2%;">Zum Portfolio</a>
+        </div>
+    </section>
+
+    <section id="about" class="about section">
+        <div class="container about-wrapper">
+            <div class="about-text">
+                <h2>Über mich</h2>
+                <p>Ich bin Muhammed Emin Eser, leidenschaftlicher Frontend-Entwickler und UX-Denker. Erste Programmiererfahrungen sammelte ich in JavaScript-Kursen, doch mein Durchbruch kam, als ich einem Freund half, seine chaotische Seite in ein nutzerfreundliches Erlebnis zu verwandeln. Seitdem fasziniert mich, wie sich Theorie in greifbare Interaktion übersetzen lässt. Ich tauche gern in Nutzerbedürfnisse ein, denke analytisch und kreativ zugleich und arbeite eng mit Entwickler:innen zusammen. Mein Ziel: Projekte von der ersten Recherche bis zum Livegang begleiten und dabei klare Entscheidungen ermöglichen. Aktuell erweitere ich mein Portfolio und freue mich auf neue Perspektiven.</p>            </div>
+            <div class="skills">
+                <h3>Skills</h3>
+                <div class="skill"><span>HTML</span><div class="progress"><div style="width:90%"></div></div></div>
+                <div class="skill"><span>CSS</span><div class="progress"><div style="width:85%"></div></div></div>
+                <div class="skill"><span>JavaScript</span><div class="progress"><div style="width:80%"></div></div></div>
+                <div class="skill-carousel"><span id="skillTicker"></span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="work section">
+        <div class="container">
+            <h2>Arbeit</h2>
+            <div class="filter">
+                <button data-filter="all" class="active">Alle</button>
+                <button data-filter="design">Design</button>
+                <button data-filter="code">Code</button>
+                <button data-filter="game">JavaScript</button>
+            </div>
+            <div class="portfolio-grid">
+                <a href="" onclick="delayNavigation(event, this)"><div class="portfolio-item design">Softdrink &nbsp; Shop &nbsp; UX-Redesign</div></a>
+                <a href="" onclick="delayNavigation(event, this)"><div class="portfolio-item code">HTML/CSS &nbsp; Responsive &nbsp; Layout</div></a>
+                <a href="" onclick="delayNavigation(event, this)"><div class="portfolio-item game">Interaktives &nbsp; Farbreaktionsspiel &nbsp; (JS)</div></a>
+                <a href="" onclick="delayNavigation(event, this)"><div class="portfolio-item design">Corporate &nbsp; Identity</div></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="showcase" class="showcase section">
+        <div class="container">
+            <h2>Showcase</h2>
+            <div class="carousel">
+                <div class="carousel-track">
+                    <div class="carousel-card">
+                         <img src="https://via.placeholder.com/800x400?text=Slide+1" alt="Vorher/Nachher">
+                        <div class="carousel-caption">Vorher-Nachher Überblick</div>
+                        </div>
+                    <div class="carousel-card">
+                        <img src="https://via.placeholder.com/800x400?text=Slide+2" alt="Designansicht">
+                        <div class="carousel-caption">Neues Design in Aktion</div>
+                    </div>
+                    <div class="carousel-card">
+                         <img src="https://via.placeholder.com/800x400?text=Slide+3" alt="Kundenfeedback">
+                        <div class="carousel-caption">Feedback & Launch</div>
+                    </div>
+                </div>
+                <button class="carousel-btn prev">&lsaquo;</button>
+                <button class="carousel-btn next">&rsaquo;</button>
+            </div>
+
+            <div class="drop-down">
+                <button class="drop-toggle">Mehr Info</button>
+                <div class="drop-content">
+                    <p>Einwöchiger UX-Sprint: Analyse, Redesign und Launch des Softdrink-Shops.</p>
+                </div>
+            </div>
+
+            <div class="slide-bar">
+                <button class="slide-toggle">Sidebar &ouml;ffnen</button>
+                <div class="side-panel">
+                    <p>Hier findest du weitere Projekte und Kontaktinfos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact section">
+        <div class="container">
+            <h2>Kontakt</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Nachricht" required></textarea>
+                <button type="submit" class="btn">Senden</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Mee Studios Alle Rechte vorbehalten.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=61575437762135" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/uxd.mee/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/muhammed-emin-eser-145551361/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://x.com/uxd_mee" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-x-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

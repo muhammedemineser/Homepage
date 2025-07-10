@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Mee Portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="../../style.css">
+        <link rel="stylesheet" href="fuseTea.css">
+    <script src="fuseTea.js"></script>
+    <script src="../../script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- twentytwenty Plugin -->
+    <link rel="stylesheet" href="vendor/twentytwenty/css/twentytwenty.css">
+    <script src="vendor/twentytwenty/js/jquery.event.move.js"></script>
+    <script src="vendor/twentytwenty/js/jquery.twentytwenty.js"></script>
+
+    </head>
+    <body class="futuristic">
+        <div class="background-blobs">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <header class="site-header">
+            <div class="container">
+                <div class="logo">Mee Studios</div>
+                <nav class="site-nav" id="navbar">
+                    <a href="../../index.html#home">Startseite</a>
+                    <a href="../../index.html#about">Über mich</a>
+                    <a href="../../index.html#work">Arbeit</a>
+                    <a href="../../index.html#contact">Kontakt</a>
+                </nav>
+                <button class="nav-toggle" id="navToggle"><i class="fas fa-bars"></i></button>
+                 <button class="theme-toggle" id="themeToggle" name="themeToggle"  class="theme-toggle theme-toggle--reversed"
+  type="button"
+  title="Toggle theme"
+  aria-label="Toggle theme"> <div id="themeIcons" style="display: inline;">
+  <div id="sunIcon" style="display: inline-block;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 32 32">
+  <circle cx="16" cy="16" r="6.34" />
+  <g stroke="currentColor" stroke-width="1" stroke-linecap="round">
+    <path d="M16 5.5v-4" />
+    <path d="M16 30.5v-4" />
+    <path d="M1.5 16h4" />
+    <path d="M26.5 16h4" />
+    <path d="m23.4 8.6 2.8-2.8" />
+    <path d="m5.7 26.3 2.9-2.9" />
+    <path d="m5.8 5.8 2.8 2.8" />
+    <path d="m23.4 23.4 2.9 2.9" />
+  </g>
+</svg></div>
+ <div id="moonIcon" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 32 32">
+  <path d="M21.5 16a9.5 9.5 0 0 1-9.5 9.5c-5.2 0-9.5-4.3-9.5-9.5s4.3-9.5 9.5-9.5c.7 0 1.4.1 2 .3a7.5 7.5 0 0 0 7.5 9.2z"/>
+</svg></div>
+</div>
+<i style="letter-spacing: 1px; font-weight: bold;font-style:normal; font-family: 'Font Awesome 5 Free';"><label for="themeToggle" style="margin: 0 0 10px 0;" id="toggleLabel">&nbsp;Hell&nbsp; </label></i></button>
+       
+            </div>
+        </header>
+        <main>
+            <div id="ueberschrift" style="padding: 2rem; margin-top: 7%;">UX,UI Design in einem Softdrinks Onlineshop</div>
+            <!-- Cartoon -->
+            <h1>Projektziel:</h1>
+            <div id="projectDescription">
+                Eine ästhetische, benutzerzentrierte, inklusive Website für Getränkebestellungen<img src="media/yasarsDoseIcon.png" alt="icon des Unternehmens" id="iconYasar" style="display: inline-block;">
+            </div>
+            <article>
+                <h2 id="meineTools">Meine Tools:</h2>
+                <div class="toolGrid">
+                    <!-- Tool-Set mit Labels und Icons -->
+                    <div class="toolSet">
+                        <div class="toolItem">
+                            <label class="label" for="krita">Krita</label>
+                            <img src="media/Krita.png" alt="Krita Logo" id="krita">
+                        </div>
+                        <div class="toolItem">
+                            <label class="label" for="chatgpt">ChatGPT</label>
+                            <img src="media/ChatGPT.png" alt="ChatGPT Logo" id="chatgpt">
+                        </div>
+                        <div class="toolItem">
+                            <label class="label" for="canva">Canva</label>
+                            <img src="media/Canva.jpg" alt="Canva Logo" id="canva">
+                        </div>
+                        <div class="toolItem">
+                            <label class="label" for="galerie">Galerie-App</label>
+                            <img src="media/GalerieApp.png" alt="Galerie App Logo" id="galerie">
+                        </div>
+                        <div class="toolItem">
+                            <label class="label" for="goodnotes">Goodnotes</label>
+                            <img src="media/Goodnotes.png" alt="Goodnotes Logo" id="goodnotes">
+                        </div>
+                    </div>
+                </div>
+                        <article>
+                <section id="beforeAfterSection">
+                    <div class="scroll-wrapper">
+                    <div class="twentytwenty-container">
+                        <img id="beforeImg" src="img/vorher.jpg" alt="Vorher-Bild" style="background-size: cover;">
+                        <img id="afterImg" src="img/nachher.png" alt="Nachher-Bild">
+                    </div>
+                    </div>
+                </section>
+             </article>
+                </article>  
+                <div id="shortBackstory" style="margin-left: 10%; margin-top: 10%;">
+                Short Backstory
+                <a href="#process" class="skip-link">
+                    <img id="skipSymbol" src="media/skipSymbol_lila.png" alt="Skip Symbol" style="width: 20px; height: 20px;">
+                    Klicke, um zu überspringen
+                </a>
+                </div>
+                <article style="display: flex; align-items: center; justify-content: center;">
+                <div class="cartoonContainer" style="color: black;">
+                    <div class="cartoonBilder">
+                        <div class="textPicCartoon">
+                                 <div class="cartoonText">Mein Entwickler Freund präsentiert mir stolz die Website,<br> die er ohne UX und ohne Designer erstellt hat.</div>                      
+                        <img src="media/Kopie von Cartoonreihe_fertig1.png" alt="Entwickler präsentiert dem Designer die Website" style="margin-right: auto;" id="pic1">
+                        </div>
+                    </div>
+                    <div class="cartoonBilder">
+                        <div class="textPicCartoon">
+                        <img src="media/Cartoonreihe_fertig2.png" alt="Entwickler begreift, dass da mehr hinter steckt" id="pic2">
+                               <div class="cartoonText">Ich erkläre ihm, dass hinter dem Programmieren <br> ein umfangreicher Designprozess steckt.</div>
+                        </div>
+                    </div>
+                    <div class="cartoonBilder">
+                        <div class="textPicCartoon">
+<div class="cartoonText">Der Tisch wird gedeckt und ich erkläre ihm, was ein Design-Sprint ist. <br> Und was als nächstes ansteht...</div>                            
+                        <img src="media/Cartoonreihe_fertig3.png" alt="Designer leitet den Entwickler in den UX,UI Workflow ein" style="margin-right: auto;" id="pic3">
+                        </div>
+                    </div>
+                    <div class="cartoonBilder">
+                        <div class="textPicCartoon">
+                            <img src="media/Kopie von Cartoonreihe_fertig4.png" alt="Designer und Entwickler suchen gemeinsam nach Lösungen für Probleme" id="pic4">
+                            <div class="cartoonText">Und die Ideen fliegen nur so durch den Raum. <br> Probleme werden definiert, Pain Points gelöst und Recherche getrieben.</div>
+                        </div>
+                    </div>
+                </div>
+             </article>
+            <h1 id="process"><i>„Ich fühlte mich wie ein UX-Chirurg kurz vor der Not-OP“</i></h1>
+             <article>
+               <section id="skills-section">
+                    <img id="bg_skills" src="media/bg_skills.png" alt="hintergrund" style="height: 170vh; opacity: 0.1; width: 110vw; margin-left: -5%;">
+                            <div class="rollen">
+                                <ul>
+                                <h3>Meine Rollen & <br> Beiträge im Projekt</h3>
+                                <li>UX Design</li>
+                                <li>UI Design</li>
+                                <li>Visual Design</li>
+                                <li>Grafik Design</li>
+                                <li>UX Writing</li>
+                                <li>Informations-<br>architektur</li>
+                                <li>Responsive Design</li>
+                                <li>Logo Design</li>
+                                </ul>
+
+                                <ul>
+                                <h3>Analyse & Planung</h3>
+                                <li>Projektmanager</li>
+                                <li>Projektanalyse & Evaluation</li>
+                                <li>Designsprint Organisator</li>
+                                <li>Bestandsaufnahme der bestehenden Website</li>
+                                <li>Benchmarking & Konkurrenzanalyse</li>
+                                <li>Identifikation von Usability-Problemen</li>
+                                <li>Re-Design unter Zeitdruck</li>
+                                <li>Mobile-First-Strategie umgesetzt</li>
+                                </ul>
+
+                                <ul>
+                                <h3>Design & Umsetzung</h3>
+                                <li>Textoptimierung für Call-to-Actions</li>
+                                <li>Visuelle Hierarchie verbessert</li>
+                                <li>Markenkohärenz im Design umgesetzt</li>
+                                <li>Designentscheidungen dokumentiert</li>
+                                <li>Empfehlungen zur Preis- & Produktdarstellung</li>
+                                <li>Entfernung exkludierender Designelemente</li>
+                                </ul>
+
+                                <ul>
+                                <h3>Kommunikation & Strategie</h3>
+                                <li>Kommunikation mit dem Entwickler und dem Klienten</li>
+                                <li>Problemlösestrategien zur Vereinheitlichung der Unternehmens-<br>erwartungen und UX-Rechercheergebnisse</li>
+                                <li>Abstimmung von Design und technischen Möglichkeiten</li>
+                                <li>Feature-Vorschläge eingebracht (z. B. Benachrichtigungs-<br>funktion)</li>
+                                <li>Marketingideen eingebracht (z. B. Neukundenrabatt, Probierpaket)</li>
+                                <li>Logo & Farbkonzept optimiert</li>
+                                <li>Empfehlung von Kundenbewertungen im Web</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+             </article>
+             <article id="IASection">
+                <h1 class="revertMargin" style="margin-top: 20vh !important; margin-left: 0% !important;">Der Arbeitsprozess <span>&nbsp; Ⅰ</span></h1>
+                <h2 class="revertMargin" style="color: black; font-weight: 800;margin-left: 0% !important;">Informationsarchitektur</h2>
+                <div class="processColumn">
+                    <div class="item-row1" style="grid-column:1/3; grid-row: 1 / 14; height:55rem; width: 85rem; background-image: url(media/wireframe_weiss.png); background-position: center; background-size: contain; background-repeat: no-repeat; margin: 0 auto; margin-right: 35%;"></div>
+                    <section class="rollen Sec" style="margin-left: 0; margin-top: 0;">
+                        <h1 style="margin-left: 10% !important; margin-top: 0; color: black; font-weight: 600;">Informationsarchitektur: Vorher vs. Nachher</h1>
+                        <h2 style="margin-top: 0; margin-left: 10% !important; color: black; font-weight: 600; font-size: 1.4rem;">Rechercheergebnis: Die Mehrheit der Nutzer <br>greift über Mobilgeräte auf die Website zu. Daher: Mobile First Ansatz.</h2>
+
+                        <div style="display: grid;
+ gap: 1.5rem; margin-left: 7%;">
+
+                            <ul class="beforeAfterIA" style="margin-left: 5% !important;">
+                            <h3 style="min-height: 1rem; color: black; font-weight: 600; ">Vorher</h3>
+                            <li>Kein Mobile-First Design</li>
+                            <li>Überladung durch drei visuell überfordernde Kästen im Header</li>
+                            <li>Unstrukturierte Inhaltsreihenfolge</li>
+                            <li>Markenlogos ganz oben – unüblich und irritierend</li>
+                            <li>„Unsere Geschichte“ zu früh auf der Seite</li>
+                            <li>Wiederholung aller Getränke – unnötige Scrolltiefe</li>
+                            <li>Produkte ohne Lagerbestand (Chips) prominent dargestellt</li>
+                            <li>Großflächige Grafik ohne funktionalen Mehrwert</li>
+                            </ul>
+
+                            <ul class="beforeAfterIA" style="margin-left: 5% !important;">
+                            <h3 style="min-height: 1rem; color: black; font-weight: 600;">Nachher</h3>
+                            <li>Mobile-First Struktur: klare vertikale Nutzerführung</li>
+                            <li>Reduktion auf das Wesentliche – kognitive Entlastung</li>
+                            <li>Priorisierung: Wichtigstes zuerst – Top-Angebot & Top-Produkte</li>
+                            <li>Marken nach unten verschoben – orientiert an Nutzererwartung</li>
+                            <li>„Unsere Geschichte“ später eingebaut – als Vertiefung, nicht Ablenkung</li>
+                            <li>Chips ans Ende verschoben – gehören nicht zur Nische & nicht auf Lager</li>
+                            <li>Wiederholung entfernt – alle Produkte in der Navigationsleiste gebündelt</li>
+                            <li>Abschlussgrafik verkleinert – dient nur noch der visuellen Abrundung</li>
+                            </ul>
+
+                        </div>
+                        <div id="evidence">
+                        <p style="font-weight: 600;"> <strong style="color: var(--grey);">UX-Grundlagen zur Entscheidung:</strong></p>
+                             <ul style="font-weight: 600;">
+                            <li><em>Hick’s Law:</em> Weniger Auswahl beschleunigt Entscheidungen</li>
+                            <li><em>Serial Position Effect:</em> Wichtiges gehört an den Anfang</li>
+                            <li><em>Jakob’s Law:</em> Nutzer erwarten bekannte Muster – z. B. Produktübersicht direkt nach dem Header</li>
+                            <li><em>Mobile-First Design:</em> Optimierung für die Hauptnutzungsplattform</li>
+                            <li><em>Content Hierarchy:</em> Klar gegliedert = bessere Orientierung & Conversion</li>
+                        </ul>
+                        <ul style="font-weight: 400;">
+                            <h3 style="font-weight: 600; color: var(--grey); margin-bottom: 3% !important; min-height: 0;">Verwendete Tools</h3>
+                            <li>Low‑Fidelity‑Wireframes in <strong>Goodnotes</strong> auf dem iPad. Als alleiniger Designer skizzierte ich unter hohem Zeitdruck kollaborativ Ideen und stellte sie telefonisch vor, um effizient voranzukommen.</li>
+                        </ul>
+                        </div>
+                        </section>
+                </div>
+             </article>
+             <article>
+                 <section id="productSection" style="margin-left: -5%;">  
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-left: 7%; margin-top: 10%;" id="dontMixTopOfArbeitsp2">
+                        <h1 id="workProcess" style="margin-top: 0% !important;">Der Arbeitsprozess <span>&nbsp;  Ⅱ</span></h1>
+ <h2 id="IA" style="color: black; font-weight: 800;">Produktdarstellung und Anpassung an die Zielgruppe</h2>
+                                        <div id="sourceImages" style="display:flex; gap:3rem; flex-wrap:nowrap; justify-content:center; margin-top:10%;">
+                                    <div class="toolItem">
+                                        <label class="label">Blubberndes Unterwasser-Bild</label>
+                                        <img class="sourcePics" src="media/unsplash.jpeg" alt="Unbearbeitetes Bild von Red Bull und Fanta">
+                                    </div>
+                                    <div class="toolItem">
+                                        <label class="label">Farbexplosion</label>
+                                        <img class="sourcePics" src="media/joozy_source.png" alt="Unbearbeitetes Bild Joozy Drinks">
+                                    </div>
+                                                                        <div class="toolItem">
+                                        <label class="label">Exotisches Wasser-Spritzen</label>
+                                        <img class="sourcePics" src="media/unsplash2.jpg" alt="Unbearbeitetes Bild von Fuse Tea">
+                                    </div>
+                                    <div class="toolItem">
+                                    <label class="label">Leuchtender Hintergrund</label>
+                                    <img class="sourcePics" src="media/chipsVorher.png" alt="Unbearbeitetes Bild von Chips">
+                                </div>
+                                    </div>
+                            <img id="products" src="media/vergleich_produktbilder_weiss.png" alt="Vergleich der Produktdarstellung vorher und nachher" style="width:100%;grid-template-columns: 1; grid-template-rows: 1; margin-top: 5%; ">                    
+                            <div class="productText">
+                                <h2 id="IA" style="color: black; font-weight: 800;">Produktbilder – Vorher vs. Nachher</h2>
+
+                                <ul>
+                                    <h3>Ausgangssituation</h3>
+                                    <p>                                    Die ursprünglichen Produktbilder entsprachen weder ästhetischen noch professionellen Standards. Es fehlte an Konsistenz hinsichtlich Größe, Ausrichtung und Format. Einige Bilder waren verpixelt, andere wirkten unpassend für die beworbene Markenidentität „frisch“, „exotisch“ oder „jung“.</p>
+                                </ul>
+                                
+                                <ul>
+                                    <h3>Ziele</h3>
+                                    <li>Verbesserung der visuellen Markenwirkung</li>
+                                    <li>Stärkung des Nutzervertrauens durch professionelle Darstellung</li>
+                                    <li>Reduktion visueller Ablenkung in der Kaufentscheidung</li>
+                                    <li>Visuelle Einheitlichkeit über alle Produktkategorien hinweg</li>
+                                </ul>
+
+                                
+                                <ul>
+                                    <h3>Vorgehen</h3>
+                                    <li>Bearbeitung aller Bilder in <strong>Krita</strong> mit präziser Ebenenausrichtung zur Vereinheitlichung von Größe und Position</li>
+                                    <li>Erstellung thematischer Hintergründe (z. B. Eis, Spritzer, Farben) für Produkte mit dem Label „exotisch“</li>
+                                    <li>Farbmodifikation und Invertierung (z. B. bei „Joozy“-Produkten), um Dynamik und Jugendlichkeit zu betonen</li>
+                                    <li>Verwendung einheitlicher Produktbilder auf der Landingpage für hohe visuelle Wiedererkennbarkeit</li>
+                                    <li>Verzicht auf Hintergrundbilder in der Detailansicht zur Konzentration auf das Produkt selbst und zur Förderung schneller Kaufentscheidungen</li>
+                                    <li>Ersetzen unscharfer oder veralteter Bilder durch neue, qualitativ hochwertige Quellen</li>
+                                </ul>
+
+                                
+                                <ul>
+                                    <h3>Ergebnisse & Nutzen</h3>
+                                    <li><strong>Visuelle Konsistenz:</strong> Einheitliche Ausrichtung, Formate und Größen über alle Produktgruppen hinweg</li>
+                                    <li><strong>Markenstärkung:</strong> Bildsprache entspricht nun dem Selbstbild des Shops (jung, frisch, dynamisch)</li>
+                                    <li><strong>Conversion-Förderung:</strong> Weniger Ablenkung in der Detailansicht = schnellere Entscheidungen</li>
+                                    <li><strong>Zielgruppenansprache:</strong> Designästhetik optimiert auf die Hauptzielgruppe (16–35 Jahre, laut Research)</li>
+                                </ul>
+
+                                
+                                <ul>
+                                    <h3>Verwendete Tools & Techniken</h3>
+                                    <li>Bildbearbeitung in <strong>Krita</strong></li>
+                                    <li>Farbkorrektur, Kontrastanpassung, Invertierung</li>
+                                    <li>Grid-Analyse & Positionierung mit Ebenentechnik</li>
+                                    <li>Recherche & Lizenzfreie Bildquellen (für Hintergründe)</li>
+                                </ul>
+                        </div>
+                    </div>
+                </section>
+             </article>
+             <article>
+                                    <h1 id="workProcess" style="margin-top: 20% !important; margin-left: 5% !important;">Der Arbeitsprozess <span>&nbsp;  Ⅲ</span></h1>
+                    <h2 id="IA" style="color: black; font-weight: 800; margin-left: 5% !important;">Empathiephase im UX-Designprozess – Beispiel & Analyse
+                    </h2>
+                    <div id="empathyWrapper">
+                    <h3 style="margin-left:8% !important;margin: 3% 0 3% 0;">UX-Rechercheergebnisse</h3>
+                    <ul style="margin-left: 3% !important;">
+                        <li>Der Großteil der Benutzer ist zwischen 16 und 35 Jahre alt.</li>
+                        <li>Die Mehrheit der Benutzer hat einen ausländischen Hintergrund.</li>
+                        <li>Die Kunden des Start-ups sind überwiegend Endkonsument:innen.</li>
+                    </ul>
+                    </div>
+                <section id="empathyRedesign">
+                    <div id="empathyGrid">
+                        <div class="image-wrapper">
+                            <img src="media/hmw.png" alt="HowMightWe">
+                        </div>
+                        <ul>
+                            <li>Wie könnten wir visuelle Inhalte gestalten, die kulturell inklusiv wirken?</li>
+                            <li>Wie könnten wir Urlaubssymbole nutzen, ohne nationalistische Konnotationen?</li>
+                            <li>Wie lässt sich eine internationale Identität betonen, ohne bestimmte Gruppen auszuschließen?</li>
+                            <li>Wie können wir sofortige Wiedererkennbarkeit zwischen Bildsprache und Markenidentität herstellen?</li>
+                            <li>Wie schaffen wir visuelle Kongruenz über die gesamte Website hinweg?</li>
+                            <li>Wie fördern wir ein emotional positives Markenerlebnis unabhängig vom kulturellen Hintergrund?</li>
+                            <li>Wie passen wir das Angebot der Zielgruppe an?</li>
+                            <li>Wie könnten wir Packungsgrößen so gestalten, dass sie für Endkonsument:innen attraktiver wirken?</li>
+                        </ul>
+                    </div>
+
+                <!-- Right Column: HMW + Analysis -->
+
+                            <div class="productText" style="margin-top: 0% !important;">
+                    <ul>
+                                    <h3>Ausgangssituation</h3>
+                    <p>Im Rahmen eines Designsprints habe ich im ersten Schritt der <strong>Empathy Phase</strong> visuelle Inhalte untersucht, die auf der Startseite für die Markenidentität verwendet wurden. Dabei fiel mir auf, dass eine Illustration unter „Unsere Geschichte“ unbeabsichtigt <strong>exkludierende visuelle Elemente</strong> enthielt.</p>
+                                </ul>
+                    <ul>
+
+
+                    <h3 style="margin-left: 5%;">Empathy Maps & Persona</h3>
+                    <div id="empathyMedia">
+                        <div id="empathyCardContainer" class="card-slider">
+                        <div class="empathy-card">
+                            <img src="media/Amina_weiss.png" class="empathy-map active" alt="Empathy Map Amina">
+                            <img src="media/Mehmet_weiss.png" class="empathy-map" alt="Empathy Map Mehmet">
+                            <img src="media/Serhat_weiss.png" class="empathy-map" alt="Empathy Map Serhat">
+                        </div>
+                        <button id="prevEmpathy" class="nav-button left">&#10094;</button>
+<button id="nextEmpathy" class="nav-button right">&#10095;</button>
+
+                        </div>
+                        <div id="visionCardContainer" class="card-slider">
+  <div class="vision-card">
+    <img src="media/Benutzergeschichten_Amina_Weiss.png" class="vision-map active" alt="Vision Map 1">
+    <img src="media/Benutzergeschichten_Serhat_Weiss.png" class="vision-map" alt="Vision Map 2">
+    <img src="media/Benutzergeschichten_Mehmet_Weiss.png" class="vision-map" alt="Vision Map 3">
+  </div>
+  <button id="prevVision">&#10094;</button>
+  <button id="nextVision">&#10095;</button>
+</div>
+                        <div style="display: block; transform: translateX(20%); margin-top: -15% !important; margin-bottom: 15% !important;">
+                        <img src="media/Persona_weiss.jpeg" alt="User Persona" style="width: 60%;">
+                        </div>
+</div>
+                    <ul style="  list-style-type: disc;">
+                    <h3>Analyse – Vorher vs. Nachher</h3>
+                    <li><strong>Problem:</strong> Das vorherige Bild zeigte einen Jungen mit Türkei-Shirt – potenziell ausgrenzend für Besucher:innen mit anderer Herkunft. Es konnte unbewusst nationale Zugehörigkeit über Markenbotschaft stellen.</li>
+                    <li><strong>UX-Ziel:</strong> Inklusivität, Emotionalität und Identifikation für alle Nutzergruppen stärken.</li>
+                    <li><strong>Maßnahme:</strong> Austausch durch eine lila-pinkfarbene Grafik im Stil des Werbeplakats – mit Hawaii-Hemd statt Nationalflagge.</li>
+                    <li><strong>Visuelle Wirkung:</strong> Farben wie Pink und Violett fördern laut Farbpsychologie Entspannung, Lust, Lebensfreude und Nostalgie – ideal für emotionalen E-Commerce.</li>
+                    <li><strong>Design-Einheitlichkeit:</strong> Der Stil passt zu den übrigen Designelementen und sorgt für kohärente Nutzererfahrung.</li>
+                    <li><strong>Lösung für kulturelle Individualität:</strong> Kennzeichnungen wie „exklusiv aus der <em>Türkei</em> “ oder „aus <em>Griechenland</em> “ wurden bewusst eingeführt – sichtbar, aber nicht dominierend.</li>
+                    </ul>
+                </div>
+                </section>
+
+               <section id="visualComparison" style="margin-top: 4rem;">
+                                    
+
+                <h2>Startseiten-Redesign – Visuelle & strukturelle Optimierung</h2>
+                    <img src="media/Grafiken vorher nachher.png" alt="Startseite vorher" style="width: 100%; border-radius: 8px; display: flex; align-items: center; justify-content:center ;">
+                    
+
+                            <div class="productText" style="margin-top: 2rem;">
+        <p style="margin: 1.5rem 5%;">und: <br> Neu hinzugekommen ist ein eigenes <strong>Favicon</strong>, das nun im Browser-Tab erscheint.
+                    <img src="media/yasarsDoseIcon.png" alt="Favicon des Unternehmens" style="height: 15%; width: 15%; vertical-align: middle; aspect-ratio: 1/1; display: inline-block;
+    max-height: 15rem; margin-right: auto;"
+ />
+                </p>
+                    <ul>
+                    <li><strong>Ausgangssituation:</strong> Drei Platzhalter oben auf der Startseite sollten langweilige Produktbilder und Markenkategorien enthalten – visuell und inhaltlich wenig ansprechend.</li>
+                    <li><strong>Redesign:</strong> Ersetzung durch ein hochwertiges, buntes Werbeplakat mit künstlerischem Stil, das „Summer Vibes“ ausstrahlt und die besten Produkte direkt präsentiert.</li>
+                    <li><strong>Farbkonzept:</strong> Lila, Pink und warme Töne erzeugen emotionale Wärme, Erregung, Nostalgie und verleihen der Marke eine süße, moderne Aura (inspiriert von ähnlichen Marken im Süßwarenbereich).</li>
+                    <li><strong>Struktur:</strong> Statt Dopplungen wie „Top Getränke“, „Dydo“ und „Coca-Cola“ → Fokussierung auf ein zentrales Angebot mit direktem visuellen Kaufimpuls.</li>
+                    <li><strong>Preisstrategie:</strong> Einführung der 12er-Packs (statt 24er) basierend auf Research über Endkund:innen → ideal für Erstkäufer & kleinere Haushalte.</li>
+                    <li><strong>Designstrategie:</strong> Dosengrafiken im Ölmalerei-Stil harmonieren mit restlichem Design, erhöhen den Wiedererkennungswert und lassen das Produkt hochwertig erscheinen.</li>
+                    <li><strong>Conversion-Ziel:</strong> Preisvergleich (UVP durchgestrichen) direkt sichtbar auf dem Plakat fördert sofortige Kaufentscheidung.</li>
+                    <li><strong>KI Einsatz zur Generierung von Bildideen und -konzepten:</strong> KI wurde genutzt, um kreative Ansätze in ein visuelles Konzept zu übersetzen und Inspiration für das Redesign zu liefern.</li>
+                    </ul>
+                                                                        <h3 style="margin-left: 120px !important;">Erkenntnisse aus dem Einsatz von KI</h3>
+                    <ul style="margin-top: 0 !important;">
+                        <li><strong>Generalisierung:</strong> ChatGPT liefert brauchbare Entwürfe, trifft aber selten die markenspezifische Bildsprache.</li>
+                        <li><strong>Begrenztes Fachwissen:</strong> Die KI versteht Begriffe, jedoch keine branchenspezifischen Feinheiten oder Sonderfälle.</li>
+                        <li><strong>Fehlendes situatives Gespür:</strong> Nuancen in Tonalität oder kulturelle Referenzen erkennt sie kaum.</li>
+                        <li><strong>Kontextverlust bei Komplexität:</strong> Mehrstufige Anforderungen führen schnell zu inkonsistenten Ergebnissen.</li>
+                    </ul>
+                    <p style="margin-left: 120px !important;">Ich nutzte KI deshalb nur als Starthilfe und verfeinerte jede Grafik manuell, um Emotion und Markenidentität stimmig abzubilden.</p>
+                
+                </div>
+                
+                 </section>
+             </article>
+             <article>
+                                <section>
+                    <h1 id="workProcess" style="margin-top: 15% !important; margin-left: 5% !important;">Der Arbeitsprozess <span>&nbsp;  IV</span></h1>
+                    <div class="productText">
+                        <h2 id="IA" style="color: black; font-weight: 800; margin-left: 5% !important;">Texte & Produktkommunikation – Anpassung an Zielgruppe</h2>
+
+                        <ul>
+                        <h3>Hintergrund & Ausgangslage</h3>
+                        <p>
+                            Die ursprünglichen Texte waren zwar emotional erzählt, aber in Länge, Tonalität und Struktur nicht optimal auf die Zielgruppe abgestimmt. Unsere UX-Recherche ergab, dass der Großteil der Kundschaft zwischen 16 und 35 Jahre alt ist. Ziel war es, eine kürzere, zielgerichtetere und handlungsorientierte Sprache zu verwenden, die trotzdem authentisch bleibt.
+                        </p>
+                        </ul>
+                <div style="background-image: url(media/textVergleich.png); background-size: contain; width: 90%; border-radius: 15px; height: auto; aspect-ratio: 1/1; background-repeat: no-repeat; margin-top: 10%; margin-left: 5vw;"></div>
+
+                        <ul>
+                        <h3>Textoptimierung – Beispiele</h3>
+                        <li><strong>Vorher (Unsere Geschichte):</strong><br>
+                            Was als kleines Gespräch unter Freunden begann, wurde schnell zu einer echten Mission. Wir saßen zusammen, haben gelacht, Erinnerungen geteilt – und plötzlich kam diese eine Frage auf: „Warum gibt’s eigentlich die ganzen geilen Getränke aus der Türkei nicht einfach hier in Deutschland?“
+                        </li>
+                        <li><strong>Nachher:</strong><br>
+                            <em>Unsere Geschichte</em><br>
+Was als kleines Gespräch unter Freunden begann, wurde schnell zu einer echten Mission. Wir saßen zusammen, haben gelacht, Erinnerungen geteilt - und plötzlich kam diese eine Frage auf: „Warum gibt's eigentlich die ganzen coolen Drinks, die wir aus dem Urlaub kennen, nicht auch in Deutschland?" Genau da hat alles angefangen...
+                        </li>
+                        <br>
+                        <li><strong>Vorher (Unsere Werte):</strong><br>
+Manchmal braucht es nur einen Schluck, um sich wie zuhause zu fühlen. Unsere Mission ist es, genau diese Momente möglich zu machen - mit Getränken, die du so in Deutschland selten findest, aber in der Türkei an jeder Ecke. Ob nostalgisch oder neu entdeckt: Jedes Produkt in unserem Shop erzählt eine kleine Geschichte - von Straßenständen am Bosporus bis zu Supermarktregalen in Izmir.Wir bringen sie dir direkt hierher - original, ehrlich, besonders.                        </li>
+                        <li><strong>Nachher:</strong><br>
+                            <em>Unsere Mission</em><br>
+Manchmal braucht es nur einen Schluck, um sich wie im Auslandsurlaub zu fühlen. Wir haben es uns zur Aufgabe gemacht, diese Momente euch zur Haustür zu bringen! Mit Getränken, die du in Deutschland gar nicht findest, aber im Urlaub an jeder Ecke findest. Ob nostalgisch oder neu entdeckt: Jedes Produkt in unserem Shop erzählt eine kleine Geschichte - von Strandständen am Meer bis zu Supermarktregalen im Balkan. Wir bringen sie dir direkt hierher - original, ehrlich, besonders.                        </li>
+                        </ul>
+
+                        <ul>
+                        <h3>UX- & Marketingbasierte Entscheidungen</h3>
+                        <li><strong>Informationsreduktion:</strong> Mehr Inhalt in wenigen Worten = kürzere Lesezeit, ideal für Mobile First (52 Sek. Ø Aufenthaltsdauer auf Startseite)</li>
+                        <li><strong>Visuelle Klarheit:</strong> Verzicht auf Überschrift „Top Getränke“, da der Content visuell bereits dominiert und mehrfach wiederholt wurde → bessere Hierarchie & Lesefluss</li>
+                        <li><strong>Call-to-Action-Relevanz:</strong> Klarere Orientierung durch fokussierte Kategorien wie „Frisch dazu“ für Ergänzungsprodukte außerhalb der Hauptnische (z. B. Chips)</li>
+                        <li><strong>Zielgruppengerecht:</strong> Tonalität leicht, modern, zugänglich → spricht die Zielgruppe der 16–35-Jährigen direkt an</li>
+                        </ul>
+
+                        <ul>
+                        <h3>Resultat</h3>
+                        <li>Texte wirken authentisch, nicht werblich</li>
+                        <li>Reduktion auf das Wesentliche fördert die Aufmerksamkeitsspanne auf Mobile Devices</li>
+                        <li>Überschriften dienen klar der Strukturierung, nicht der Wiederholung</li>
+                        <li>Content vermittelt Kompetenz, Klarheit und Markenidentität</li>
+                        </ul>
+                    </div>
+                </div>  
+                </section>
+             </article>
+             <article style="margin-top: 5%;">
+                <section id="postLaunchResearch" style="padding: 4rem 2rem; background: rgba(249, 249, 249, 0.1); border-top: 2px solid #e0e0e0;">
+                <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 2rem;">🚀 Post-Launch Research & Rückmeldung</h2>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; max-width: 1200px; margin: 0 auto;">
+                    
+                    <!-- Linke Seite: Visuelle Darstellung (Chat-Style Bubbles) -->
+                    <div style="margin-left: -30%;">
+                    <div style="background: rgba(249, 249, 249, 0.1); padding: 1.2rem 1.5rem; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); margin-bottom: 1.5rem;">
+                        <strong>🧪 Nutzerfeedback:</strong><br>
+                        „Die Seite ist super einfach zu navigieren – ich wusste sofort, was ich tun muss.“
+                    </div>
+
+                    <div style="background: rgba(249, 249, 249, 0.1); padding: 1.2rem 1.5rem; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); margin-bottom: 1.5rem;">
+                        <strong>📱 UX-Test im Bekanntenkreis:</strong><br>
+                        „Alles wirkt stimmig, schön gestaltet und intuitiv – gefällt mir richtig gut.“
+                    </div>
+
+                    <div style="background: rgba(249, 249, 249, 0.1); padding: 1.2rem 1.5rem; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border-left: 4px solid #00c37a;">
+                        <strong>👔 Rückmeldung vom Klienten:</strong><br>
+                        „Ich bin wirklich beeindruckt! Das übertrifft meine Erwartungen – danke für die professionelle Unterstützung.“
+                    </div>
+                    </div>
+
+                    <!-- Rechte Seite: Zusammenfassung als Text -->
+                    <div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Qualitatives Feedback & berufliche Anerkennung</h3>
+                    <ul style="font-size: 1.1rem; line-height: 1.7;">
+                        <li>Ich präsentierte die Website mehreren Personen aus meinem privaten Umfeld und beobachtete deren Interaktionen.</li>
+                        <li>Das Nutzerverhalten war durchweg positiv: einfache Navigation, gutes Layout, schnelle Orientierung.</li>
+                        <li>In einem Nachgespräch mit dem Unternehmer erhielten wir sehr positives Feedback – inklusive beruflicher Anerkennung.</li>
+                        <li>Der Klient zeigte sich begeistert vom Resultat und bestätigte, dass er mich in Zukunft für weitere Designprojekte beauftragen wird.</li>
+                        <li>Er kündigte außerdem an, mich öffentlich weiterzuempfehlen – ein bedeutender Schritt für mich als angehenden UX-Designer.</li>
+                    </ul>
+
+                    <p style="margin-top: 1.5rem; font-style: italic; color: #555;">Dieses Feedback zeigt, dass Design nicht nur Interface ist – sondern Wirkung, Beziehung und Vertrauen schafft.</p>
+
+                    <a href="index_Rueckblick.html" id="rueckblick" style="display: inline-block; margin-top: 2rem; background: #222; color: white; padding: 0.8rem 1.6rem; border-radius: 8px; text-decoration: none; font-weight: bold;">📝 Weiter zu: Sprint Review & Learnings</a>
+                    </div>
+                </div>
+                </section>
+             </article>
+        </main>
+    </body>
+</html>
+
+
+
