@@ -391,3 +391,66 @@ window.addEventListener('load', () => {
     updatePositions();
     scrollWrapper.addEventListener('scroll', updatePositions);
   }
+
+// ---------- Page transition logic ----------
+(function(){
+  const addTransitionMarkup = () => {
+    if (document.querySelector('.layers')) return;
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'transitionEffect/style.css';
+    document.head.appendChild(link);
+
+    const section = document.createElement('section');
+    section.className = 'layers';
+    section.style.display = 'none';
+    section.innerHTML = `\n  <div class="layer layer1"></div>\n  <div class="layer layer2"></div>\n  <div class="layer layer3"></div>`;
+    document.body.prepend(section);
+  };
+
+  const playTransition = () => {
+    const overlay = document.querySelector('.layers');
+    if (!overlay || typeof anime === 'undefined') return;
+    overlay.style.display = 'block';
+    anime({
+      targets: '.layer',
+      rotateY: [
+        { value: 200, duration: 1000 },
+        { value: -1, duration: 1000 },
+        { value: 0, duration: 1000 }
+      ],
+      easing: 'easeInOutSine',
+      loop: false,
+      direction: 'normal',
+      delay: anime.stagger(150)
+    });
+    setTimeout(() => {
+      overlay.style.display = 'none';
+    }, 3000);
+  };
+
+  const prepareAnchors = () => {
+    document.querySelectorAll('a[href$=".html"]').forEach(a => {
+      if (a.getAttribute('href').startsWith('#')) return;
+      a.addEventListener('click', () => {
+        sessionStorage.setItem('showTransition', 'true');
+      });
+    });
+  };
+
+  document.addEventListener('DOMContentLoaded', () => {
+    addTransitionMarkup();
+    prepareAnchors();
+
+    const animeScript = document.createElement('script');
+    animeScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js';
+    animeScript.onload = () => {
+      if (sessionStorage.getItem('showTransition') === 'true') {
+        sessionStorage.removeItem('showTransition');
+        playTransition();
+      }
+    };
+    document.head.appendChild(animeScript);
+  });
+})();
+// -------- end page transition logic ---------
