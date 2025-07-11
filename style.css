@@ -975,3 +975,40 @@ animation-fill-mode: forwards;
   border: 1px solid rgba(0, 255, 255, 0.15);
 }
 
+.layer {
+  will-change: transform, opacity, box-shadow;
+}
+
+.transition-image {
+  position: absolute;
+  width: 10%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 10000;
+  pointer-events: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+.image-credit {
+  position: absolute;
+  top: calc(50% + 130px); /* Abstand unter dem Bild */
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.06em;
+  gap: 8px; /* falls du das Label irgendwann gruppieren willst */
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 10001;
+  pointer-events: none;
+}
+
+
+
