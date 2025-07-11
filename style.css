@@ -396,7 +396,8 @@ body.futuristic .site-footer {
     border: 1px solid var(--primary);
     border-radius: 4px;
     font: inherit;
-    background: rgba(255, 255, 255, 0.1);
+backdrop-filter: blur(6px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  background: rgba(255, 255, 255, 0.1);
     color: var(--light);
 }
 
@@ -433,7 +434,7 @@ body:not(futuristic) .contact textarea {
   max-width: 600px;
   margin-left: 0;
   box-sizing: border-box;
-
+ background:  rgba(255, 255, 255, 0.1);
   /* Optional: use padding ONLY if it doesn’t interfere with child layout */
   padding: 2rem;
 }
