@@ -435,14 +435,19 @@ const addTransitionMarkup = () => {
   section.className = 'layers';
   section.style.display = 'none';
 
+  const section = document.createElement('section');
+  section.className = 'layers';
+  section.style.display = 'none';
+
   section.innerHTML = `
     <div class="layer layer1"></div>
     <div class="layer layer2"></div>
     <div class="layer layer3"></div>
-    <img src="meinIcon.png" class="transition-image" />
-    <span class="image-credit">Presented by Mee Studios</span>
+    <div class="transition-content">
+      <img src="meinIcon.png" class="transition-image" />
+      <span class="image-credit">Presented by Mee Studios</span>
+    </div>
   `;
-
   document.body.prepend(section);
 };
 
