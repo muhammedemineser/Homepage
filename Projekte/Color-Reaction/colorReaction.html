@@ -12,28 +12,49 @@
   <link rel="stylesheet" href="colorReaction.css">
   <script src="colorReaction.js" defer></script>
   <script src="../../script.js" defer></script>
+  
 </head>
-<body>
+<body class="futuristic">
   <div class="background-blobs">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
   </div>
-  <header class="site-header">
-    <div class="container">
-      <div class="logo">Mee Studios</div>
-      <nav class="site-nav" id="navbar">
-        <a href="../../index.html#home">Startseite</a>
-        <a href="../../index.html#about">Über mich</a>
-        <a href="../../index.html#work">Arbeit</a>
-        <a href="../../index.html#contact">Kontakt</a>
-      </nav>
-      <button class="nav-toggle" id="navToggle"><i class="fas fa-bars"></i></button>
-      <button class="theme-toggle" id="themeToggle"><i class="fas fa-bolt"></i></button>
-    </div>
-  </header>
-  <main class="container portfolio-item">
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">Mee Studios</div>
+            <nav class="site-nav" id="navbar" style="font-family: 'Montserrat', sans-serif;">
+                <a href="../../index.html#home">Startseite</a>
+                <a href="../../index.html#about">Über mich</a>
+                <a href="../../index.html#work">Arbeit</a>
+                <a href="../../index.html#contact">Kontakt</a>
+            </nav>
+            <button class="nav-toggle" id="navToggle"><i class="fas fa-bars"></i></button>
+            <button class="theme-toggle" id="themeToggle" name="themeToggle"
+  type="button"
+  title="Toggle theme"
+  aria-label="Toggle theme"> <div id="themeIcons" style="display: inline;">
+  <div id="sunIcon" class="visible"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 32 32">  <circle cx="16" cy="16" r="6.34" />
+  <g stroke="currentColor" stroke-width="1" stroke-linecap="round">
+    <path d="M16 5.5v-4" />
+    <path d="M16 30.5v-4" />
+    <path d="M1.5 16h4" />
+    <path d="M26.5 16h4" />
+    <path d="m23.4 8.6 2.8-2.8" />
+    <path d="m5.7 26.3 2.9-2.9" />
+    <path d="m5.8 5.8 2.8 2.8" />
+    <path d="m23.4 23.4 2.9 2.9" />
+  </g>
+ </svg></div>
+ <div id="moonIcon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 32 32">
+  <path d="M21.5 16a9.5 9.5 0 0 1-9.5 9.5c-5.2 0-9.5-4.3-9.5-9.5s4.3-9.5 9.5-9.5c.7 0 1.4.1 2 .3a7.5 7.5 0 0 0 7.5 9.2z"/>
+ </svg></div>
+ </div>
+ <i style="letter-spacing: 1px; font-weight: bold;font-style:normal; font-family: 'Font Awesome 5 Free';"><label for="themeToggle" style="margin: 0 0 10px 0;" id="toggleLabel">&nbsp;Hell&nbsp; </label></i></button>
+        </div>
+    </header>
+  <main>
     <h1>Farbreaktionsspiel – Ein Game mit Backstory</h1>
     <section style="margin-top: 5%;">
       <div style="width: 80vw; height: 80vh; display: flex; justify-content: center; align-items: center; margin: 0 auto; position: relative;">
@@ -119,32 +140,28 @@
           <li>verstärkte Präsentationsfähigkeiten beim Erklären komplexer technischer Inhalte</li>
         </ul>
     </section>
-    <section id="postLaunchResearch" style="padding: 4rem 2rem; background: #f9f9f9; border-top: 2px solid #e0e0e0;">
-  <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 2rem;">🎮 Post-Launch Feedback & pädagogischer Einsatz</h2>
-  
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; max-width: 1200px; margin: 0 auto;">
-    
-    <!-- Linke Seite: Visuelle Darstellung (Feedback Bubbles) -->
-    <div>
-      <div style="background: white; padding: 1.2rem 1.5rem; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); margin-bottom: 1.5rem;">
-        <strong>🧍‍♂️ Schüler-Feedback:</strong><br>
+   <article style="margin-top: 5%; max">
+  <section id="postLaunchResearch" style="padding: 4rem 2rem; background: rgba(249, 249, 249, 0.1); border-top: 2px solid #e0e0e0;">
+    <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 2rem;">🎮 Post-Launch Feedback & pädagogischer Einsatz</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; max-width: 1200px; margin: 0 auto;">
+      <!-- Linke Seite: Visuelle Darstellung (Chat-Style Bubbles) -->
+      <div style="margin-left: -30%;">
+        <div style="background: rgba(249, 249, 249, 0.1); padding: 1.2rem 1.5rem; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); margin-bottom: 1.5rem;">
+          <strong>🧍‍♂️ Schüler-Feedback:</strong><br>
         „Ich hab gar nicht gedacht, dass das dein eigenes Spiel ist – das ist richtig professionell gemacht!“
       </div>
-
-      <div style="background: #fff; padding: 1.2rem 1.5rem; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); margin-bottom: 1.5rem;">
-        <strong>🏫 Lehrerreaktion:</strong><br>
+        <div style="background: rgba(249, 249, 249, 0.1); padding: 1.2rem 1.5rem; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); margin-bottom: 1.5rem;">
+          <strong>🏫 Lehrerreaktion:</strong><br>
         „Starke Idee! Ich bin wirklich beeindruckt, wie du Theorie aus dem Unterricht in ein Spiel übertragen hast.“
       </div>
-
-      <div style="background: #e9f6ee; padding: 1.2rem 1.5rem; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border-left: 4px solid #00c37a;">
-        <strong>👨‍👦 Feedback aus dem Umfeld:</strong><br>
+        <div style="background: rgba(249, 249, 249, 0.1); padding: 1.2rem 1.5rem; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border-left: 4px solid #00c37a;">
+          <strong>👨‍👦 Feedback aus dem Umfeld:</strong><br>
         „Du hast nicht nur ein Spiel gebaut – du hast was Lehrreiches und Spaßiges verbunden. Das kann richtig groß werden.“
       </div>
-    </div>
-
-    <!-- Rechte Seite: Zusammenfassung als Text -->
-    <div>
-      <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">UX-Forschung, Motivation & reale Anwendung</h3>
+      </div>
+      <!-- Rechte Seite: Zusammenfassung als Text -->
+      <div>
+        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">UX-Forschung, Motivation & reale Anwendung</h3>
       <ul style="font-size: 1.1rem; line-height: 1.7;">
         <li>Ich habe das Spiel im Sport-Leistungskurs live vorgestellt, inklusive QR-Code und interaktivem Spielen durch die ganze Klasse.</li>
         <li>Das Nutzerfeedback war spontan, ehrlich und extrem positiv – viele wollten direkt mehrere Durchgänge spielen.</li>
@@ -152,15 +169,12 @@
         <li>Rückmeldungen wie „zu viel Text“ habe ich produktiv aufgenommen und in animierte Dropdowns umgewandelt.</li>
         <li>Mein Lehrer lobte die Brücke zwischen Theorie und Praxis und zeigte Interesse, das Spiel langfristig im Unterricht einzusetzen.</li>
       </ul>
-
-      <p style="margin-top: 1.5rem; font-style: italic; color: #555;">
-        Das Projekt hat gezeigt, wie man durch kreative UX-Entwicklung wissenschaftliche Inhalte spielerisch vermitteln kann – und gleichzeitig echte Begeisterung auslöst.
-      </p>
-
-      <a href="reflexion.html" style="display: inline-block; margin-top: 2rem; background: #222; color: white; padding: 0.8rem 1.6rem; border-radius: 8px; text-decoration: none; font-weight: bold;">🔍 Weiter zu: Reflexion & Erkenntnisse</a>
+        <p style="margin-top: 1.5rem; font-style: italic; color: #555; font-size: 17px;">Dieses Feedback zeigt, dass Design nicht nur Interface ist – sondern Wirkung, Beziehung und Vertrauen </p>
+        <a href="index_Rueckblick.html" id="rueckblick" style="display: inline-block; margin-top: 2rem; background: #222; color: white; padding: 0.8rem 1.6rem; border-radius: 8px; text-decoration: none; font-weight: bold;">📝 Weiter zu: Sprint Review & Learnings</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+</article>
   </main>
 </body>
 </html>

@@ -86,37 +86,50 @@ function playAnimation(element, animationName) {
 themeToggle.addEventListener("click", () => {
   const isDark = document.documentElement.classList.toggle("dark");
 
-  if (isDark) {
+ if (isDark) {
     playAnimation(sun, "fadeOut");
-      setTimeout(() => {
-
-    playAnimation(moon, "fadeIn");
-      }, 1000);
-
-    sun.classList.remove("visible");
-    moon.classList.add("visible");
+    setTimeout(() => {
+      sun.classList.remove("visible");
+      moon.classList.add("visible");
+      playAnimation(moon, "fadeInMoon");
+    }, 1000);
   } else {
-    playAnimation(moon, "fadeOut");
-    playAnimation(sun, "fadeIn");
-
-    moon.classList.remove("visible");
-      setTimeout(() => {
-
-    sun.classList.add("visible");
-      }, 1000);
+    playAnimation(moon, "fadeOutMoon");
+    setTimeout(() => {
+      moon.classList.remove("visible");
+      sun.classList.add("visible");
+      playAnimation(sun, "fadeIn");
+    }, 1000);
   }
 
 
     const toggleLabel = document.getElementById("toggleLabel");
     if (!toggleLabel.dataset.original) {
-        toggleLabel.dataset.original = toggleLabel.innerHTML;
-    }
-    if (toggleLabel.innerHTML === "Dunkel") {
+  setTimeout(() => {
+    toggleLabel.dataset.original = toggleLabel.innerHTML;
+
+    toggleLabel.style.opacity = 0;
+
+    setTimeout(() => {
+      toggleLabel.innerHTML = "Dunkel";
+      toggleLabel.style.opacity = 1;
+    }, 500); // Warte, bis das Ausblenden abgeschlossen ist
+  }, 1000);
+} else {
+  setTimeout(() => {
+    toggleLabel.style.opacity = 0;
+
+    setTimeout(() => {
+      if (toggleLabel.innerHTML === "Dunkel") {
         toggleLabel.innerHTML = toggleLabel.dataset.original;
-    } else {
+      } else {
         toggleLabel.innerHTML = "Dunkel";
-        moon.style.marginTop= "40px";
-    }
+      }
+      toggleLabel.style.opacity = 1;
+    }, 500);
+  }, 1000);
+}
+
     const isFuturistic = document.body.classList.contains('futuristic');
     document.body.classList.toggle('futuristic');
 
@@ -378,3 +391,80 @@ window.addEventListener('load', () => {
     updatePositions();
     scrollWrapper.addEventListener('scroll', updatePositions);
   }
+
+  // ---------- Page transition logic ----------
+(function(){
+  const addTransitionMarkup = () => {
+    if (document.querySelector('.layers')) return;
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'transitionEffect/style.css';
+    document.head.appendChild(link);
+
+    const section = document.createElement('section');
+    section.className = 'layers';
+    section.style.display = 'none';
+    section.innerHTML = `\n  <div class="layer layer1"></div>\n  <div class="layer layer2"></div>\n  <div class="layer layer3"></div>`;
+    document.body.prepend(section);
+  };
+
+  const playTransition = () => {
+    const overlay = document.querySelector('.layers');
+    if (!overlay || typeof anime === 'undefined') return;
+    overlay.style.display = 'block';
+   anime({
+  targets: '.layer',
+  rotateY: [
+    { value: 200, duration: 1000 },
+    { value: -1, duration: 1000 },
+    { value: 0, duration: 1000 }
+  ],
+  opacity: [
+    { value: 1, duration: 0 },
+    { value: 0.5, duration: 1250},         // Start bei voller Sichtbarkeit
+    { value: 0, duration: 1500 }       // Fade-out über 2.5 Sekunden
+  ],
+  easing: 'easeInOutSine',
+  loop: false,
+  direction: 'normal',
+  delay: anime.stagger(150)
+});
+    setTimeout(() => {
+      overlay.style.display = 'none';
+    }, 1500);
+  };
+
+  const prepareAnchors = () => {
+    document.querySelectorAll('a[href$=".html"]').forEach(a => {
+      if (a.getAttribute('href').startsWith('#')) return;
+      a.addEventListener('click', () => {
+        sessionStorage.setItem('showTransition', 'true');
+      });
+    });
+  };
+
+  document.addEventListener('DOMContentLoaded', () => {
+if (sessionStorage.getItem('showTransition') === 'true') {
+  document.body.style.opacity = '0.3';
+  document.body.style.transition = 'opacity 0.3s ease';
+  setTimeout(() => {
+    document.body.style.opacity = '1';
+  }, 1500);
+} else {
+  document.body.style.opacity = '1'; // sofort sichtbar, wenn kein Übergang
+}
+
+    addTransitionMarkup();
+    prepareAnchors();
+
+    const animeScript = document.createElement('script');
+    animeScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js';
+    animeScript.onload = () => {
+      if (sessionStorage.getItem('showTransition') === 'true') {
+        sessionStorage.removeItem('showTransition');
+        playTransition();
+      }
+    };
+    document.head.appendChild(animeScript);
+  });
+})();

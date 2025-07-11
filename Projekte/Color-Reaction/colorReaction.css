@@ -1,6 +1,6 @@
 @font-face {
   font-family: "montserrat";
-  src: url("fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+  src: url("fonts/montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
 }
 
 
@@ -20,13 +20,26 @@ body {
     width: 100%;
     background-color: #f4f4f4;
     overflow-x: hidden;
+    font-family: "montserrat", sans;
 }
 :root {
     --grey: #b4b0bd;
 }
 
-h1 {
+body:not(.futuristic) h1 {
       display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "montserrat", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+    margin: 5% 0 0 0;
+  padding: 0;
+    color: black;
+}
+
+body.futuristic h1 {
+        display: flex;
   align-items: center;
   justify-content: center;
   font-family: "montserrat", sans-serif;
@@ -36,7 +49,7 @@ h1 {
   padding: 0;
 }
 
-h2 {
+body:not(.futuristic) h2 {
       display: flex;
   align-items: center;
   color: var(--grey);
@@ -46,10 +59,23 @@ h2 {
   font-family: "montserrat", sans-serif;
   margin: 3% 10% 0% 10%;
   height: 7vh;
+  color: black;
 }
 
-p {
-      font-family: "Montserrat", sans-serif;
+body.futuristic h2 {
+      display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.7);
+  width: 90vw;
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: "montserrat", sans-serif;
+  margin: 3% 10% 0% 10%;
+  height: 7vh;
+}
+
+body:not(.futuristic) p {
+      font-family: "montserrat", sans-serif;
   font-weight: 600;
   min-height: 1rem; 
   color: black;
@@ -58,11 +84,32 @@ p {
   margin-left: 3%;
 }
 
-ul li, #postLaunchResearch div strong {
-    font-family: "Montserrat", sans-serif;
+body.futuristic p {
+      font-family: "montserrat", sans-serif;
+  font-weight: 600;
+  min-height: 1rem; 
+  color: white;
+  line-height: 1.7;
+  font-size: 1.5rem;
+  margin-left: 3%;
+}
+
+body:not(.futuristic) ul li, 
+body:not(.futuristic) #postLaunchResearch div strong {
+    font-family: "montserrat", sans-serif;
   font-weight: 600;
   min-height: 1rem; 
   color: black;
+  line-height: 1.7;
+  font-size: 1.5rem;
+  margin-left: 3%;
+}
+
+body.futuristic ul li, #postLaunchResearch div strong {
+    font-family: "montserrat", sans-serif;
+  font-weight: 600;
+  min-height: 1rem; 
+  color: #fff;
   line-height: 1.7;
   font-size: 1.5rem;
   margin-left: 3%;
@@ -72,12 +119,154 @@ ul li, #postLaunchResearch div strong {
   font-size: 1rem;
 }
 
-#postLaunchResearch div div:not(strong) {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  min-height: 1rem; 
-  color: black;
-  line-height: 1.7;
+#postLaunchResearch div strong {
+  font-family: "montserrat", sans-serif;
+  font-weight:600;
   font-size: 1.2rem;
-  margin-left: 3%;
+  margin: 15px;
+}
+
+#postLaunchResearch div{
+  font-family: "montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.sourcePics {
+  display: inline;
+height:auto;
+  aspect-ratio: 1/1;
+  width: 150px;
+    white-space: nowrap;
+}
+
+body.futuristic .toolItem label {
+  margin: 20px;
+  color: white;
+}
+
+.toolItem label {
+  margin: 20px;
+}
+
+body.futuristic,
+body.futuristic h1,
+body.futuristic h2,
+body.futuristic h3,
+body.futuristic h4,
+body.futuristic h5,
+body.futuristic h6,
+body.futuristic p,
+body.futuristic li,
+body.futuristic .productText h3,
+body.futuristic #empathyWrapper h3,
+body.futuristic .productText :is(p, ul li),
+body.futuristic #empathyGrid :is(ul li),
+body.futuristic #empathyWrapper :is(ul li),
+body.futuristic #empathyGrid ul li,
+body.futuristic .rollen,
+body.futuristic .rollen.Sec,
+body.futuristic .label,
+body.futuristic .skip-link,
+body.futuristic .beforeAfterIA li {
+  color: white !important;
+}
+
+body:not(.futuristic),
+body:not(.futuristic) h1,
+body:not(.futuristic) h2,
+body:not(.futuristic) h3,
+body:not(.futuristic) h4,
+body:not(.futuristic) h5,
+body:not(.futuristic) h6,
+body:not(.futuristic) p,
+body:not(.futuristic) li,
+body:not(.futuristic) .productText h3,
+body:not(.futuristic) #empathyWrapper h3,
+body:not(.futuristic) .productText :is(p, ul li),
+body:not(.futuristic) #empathyGrid :is(ul li),
+body:not(.futuristic) #empathyWrapper :is(ul li),
+body:not(.futuristic) #empathyGrid ul li,
+body:not(.futuristic) .rollen,
+body:not(.futuristic) .rollen.Sec,
+body:not(.futuristic) .label,
+body:not(.futuristic) .skip-link,
+body:not(.futuristic) .cartoonText,
+body:not(.futuristic) .beforeAfterIA li {
+  color: black !important;
+}
+
+body:not(.futuristic) #postLaunchResearch,
+body:not(.futuristic) #postLaunchResearch [style*="background: #fff"],
+body:not(.futuristic) #postLaunchResearch [style*="background: #f9f9f9"] {
+  background: rgba(6, 6, 6, 0.1) !important;
+}
+
+body.futuristic #rueckblick {
+  background: white !important;
+  color: black !important;
+}
+
+body.futuristic #empathyMedia {
+  opacity: 0.8 !important;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: 'montserrat', sans-serif;
+}
+
+.site-nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.site-nav a {
+    color: var(--light);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-family: 'montserrat', sans-serif !important;
+    font-size: 600;
+}
+
+.site-nav a {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.site-nav a:hover {
+    color: var(--primary);
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--light);
+    font-size: 1.5rem;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .site-nav {
+        display: none;
+        flex-direction: column;
+        background: var(--dark);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+}
+
+.site-nav.show {
+    display: flex;
+}
+
+.nav-toggle {
+    display: block;
+}
 }

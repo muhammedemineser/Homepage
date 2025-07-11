@@ -57,7 +57,10 @@ body.futuristic .site-header {
     min-width: 120px;
     text-align: center;
     vertical-align: middle;
+  transition: opacity 0.5s ease;
+  opacity: 1;
 }
+
 
 .logo {
     font-size: 1.5rem;
@@ -96,7 +99,6 @@ body.futuristic .site-header {
     cursor: pointer;
     transition: transform 0.3s;
     height: max-content;
-    margin-top: -40px;
 }
 
 
@@ -422,7 +424,7 @@ body:not(futuristic) .contact textarea {
 
 #contactFormWrapper {
   border-radius: 1.5rem;
-  box-shadow: 3px 3px 24px rgba(0, 0, 0, 1);
+  box-shadow: 3px 3px 24px var(--primary);
   width: 100%;
   max-width: 600px;
   margin-left: 0;
@@ -834,14 +836,13 @@ body:not(futuristic) .contact textarea {
 }
 
 #sunIcon, #moonIcon {
-    display: inline-block;
+    display: none;
+    opacity: 0;
     height: fit-content;
     position: relative;
 }
 
-#sunIcon {
-    margin-right: -30px;
-}
+
 
 .sun,
 .moon {
@@ -852,14 +853,61 @@ body:not(futuristic) .contact textarea {
 }
 
 
-.visible {
+#sunIcon.visible,
+#moonIcon.visible {
+  display: inline-block;
   opacity: 1;
-  pointer-events: auto;
-    transition: transform 0.3s ease;
-  animation-duration: 1s;
-  animation-fill-mode: both;
-  display: inline;
 }
+
+#moonIcon {
+animation-duration: 3.2s;
+animation-fill-mode: forwards;
+}
+
+@keyframes fadeInMoon {
+
+    -10% {
+    transform: rotate(0deg);
+    opacity: 0;
+    animation-timing-function: ease-in;
+    }
+0% {
+        transform: rotate(720deg); /* 2 volle Umdrehungen */  
+        opacity: 0.2;  
+
+  }
+  60% {
+        transform: rotate(1480deg); /* 4 volle Umdrehungen */
+    opacity: 1;
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: rotate(1440deg); /* zurückfedern */
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes fadeOutMoon {
+ 
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+    animation-timing-function: cubic-bezier(0.9, 0.03, 0.69, 0.22);
+  }
+  40% {
+    opacity: 0.5;
+    transform: rotate(20deg);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(-90deg);
+    animation-timing-function: ease-in;
+  }
+}
+
+
+
 
 @keyframes fadeIn {
   0% { transform: scale(0); }
@@ -874,3 +922,56 @@ body:not(futuristic) .contact textarea {
   80% { transform: scale(1.2); }
   100% { transform: scale(0); }
 }
+/*anime.js */
+.layers {
+  width: 98vw;
+  height: 93vh;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  perspective: 1000px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+
+.layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(120deg, rgba(94, 58, 137, 0.3), rgba(111, 75, 165, 0.3), rgba(62, 84, 163, 0.3));
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  box-shadow: 0 0 32px 5px rgba(0, 255, 255, 0.5);
+  border: 1px solid rgba(0, 255, 255, 0.25);
+}
+
+.layer2 {
+  background: linear-gradient(300deg, rgba(62, 84, 163, 0.25), rgba(111, 75, 165, 0.25));
+  backdrop-filter: blur(14px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateZ(-30px);
+  border-radius: 18px;
+  box-shadow: 0 0 28px 4px rgba(0, 255, 255, 0.4);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.layer3 {
+  background: linear-gradient(45deg, rgba(111, 75, 165, 0.2), rgba(94, 58, 137, 0.2));
+  backdrop-filter: blur(18px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateZ(-60px);
+  border-radius: 18px;
+  box-shadow: 0 0 24px 3px rgba(0, 255, 255, 0.3);
+  border: 1px solid rgba(0, 255, 255, 0.15);
+}
+
