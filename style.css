@@ -37,7 +37,7 @@ body.futuristic {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 13;
 }
 
 body.futuristic .site-header {
@@ -942,7 +942,7 @@ animation-fill-mode: forwards;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
+  z-index: 14;
 }
 
 
@@ -1036,7 +1036,7 @@ body:not(.futuristic) .layer3 {
   transform: translate(-50%, -50%);
   opacity: 0;
   transition: opacity 0.4s ease;
-  z-index: 10000;
+  z-index: 15;
   pointer-events: none;
 }
 
@@ -1055,7 +1055,7 @@ body:not(.futuristic) .layer3 {
   gap: 8px; /* falls du das Label irgendwann gruppieren willst */
   opacity: 0;
   transition: opacity 0.4s ease;
-  z-index: 10001;
+  z-index: 16;
   pointer-events: none;
 }
 
