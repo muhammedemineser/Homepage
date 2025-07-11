@@ -993,7 +993,11 @@ body:not(.futuristic) .layer {
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(120deg, rgba(94, 58, 137, 0.3), rgba(111, 75, 165, 0.3), rgba(62, 84, 163, 0.3));
+  /* Increase opacity in light theme for clearer transition overlay */
+  background: linear-gradient(120deg,
+      rgba(94, 58, 137, 0.6),
+      rgba(111, 75, 165, 0.6),
+      rgba(62, 84, 163, 0.6));
   backdrop-filter: blur(10px);
   border-radius: 18px;
   box-shadow: 0 0 32px 5px rgba(0, 255, 255, 0.5);
