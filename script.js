@@ -156,7 +156,9 @@ themeToggle.addEventListener("click", () => {
         empathyImages[2].src = isFuturistic
             ? "media/Serhat K._20250426_103242_0000.png"
             : "media/Serhat_weiss.png";
-    
+
+    }
+
     // Vision Maps
     const visionImages = document.querySelectorAll('.vision-map');
     if (visionImages.length === 3) {
