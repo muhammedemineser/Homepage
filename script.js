@@ -399,12 +399,7 @@ window.addEventListener('load', () => {
 (function(){
 const addTransitionMarkup = () => {
   if (document.querySelector('.layers')) return;
-
-  const link = document.createElement('link');
-  link.rel = 'stylesheet';
-  link.href = 'transitionEffect/style.css';
-  document.head.appendChild(link);
-
+  
   const section = document.createElement('section');
   section.className = 'layers';
   section.style.display = 'none';
