@@ -942,7 +942,7 @@ animation-fill-mode: forwards;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 14;
+  z-index: 9999;
 }
 
 
@@ -983,21 +983,13 @@ animation-fill-mode: forwards;
   border: 1px solid rgba(0, 255, 255, 0.15);
 }
 
-.layer {
-  will-change: transform, opacity, box-shadow;
-}
-
 body:not(.futuristic) .layer {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  /* Increase opacity in light theme for clearer transition overlay */
-  background: linear-gradient(120deg,
-      rgba(94, 58, 137, 0.6),
-      rgba(111, 75, 165, 0.6),
-      rgba(62, 84, 163, 0.6));
+  background: linear-gradient(120deg, rgba(94, 58, 137, 0.6), rgba(111, 75, 165, 0.6), rgba(62, 84, 163, 0.6));
   backdrop-filter: blur(10px);
   border-radius: 18px;
   box-shadow: 0 0 32px 5px rgba(0, 255, 255, 0.5);
@@ -1013,11 +1005,11 @@ body:not(.futuristic) .layer2 {
   transform: translateZ(-30px);
   border-radius: 18px;
   box-shadow: 0 0 28px 4px rgba(0, 255, 255, 0.4);
-  border: 1px solid rgba(0, 255, 255, 0.35);
+  border: 1px solid rgba(0, 255, 255, 0.65);
 }
 
 body:not(.futuristic) .layer3 {
-  background: linear-gradient(45deg, rgba(111, 75, 165, 0.35), rgba(94, 58, 137, 0.35));
+  background: linear-gradient(45deg, rgba(111, 75, 165, 0.65), rgba(94, 58, 137, 0.65));
   backdrop-filter: blur(18px);
   position: absolute;
   top: 0;
@@ -1028,25 +1020,39 @@ body:not(.futuristic) .layer3 {
   border: 1px solid rgba(0, 255, 255, 0.25);
 }
 
-.transition-image {
+.layer {
+  will-change: transform, opacity, box-shadow;
+}
+
+.transition-content {
   position: absolute;
-  width: 10%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+  z-index: 10000;
+  background: linear-gradient(120deg, rgba(94, 58, 137, 0.7), rgba(111, 75, 165, 0.7), rgba(62, 84, 163, 0.7));
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  box-shadow: 0 0 32px 5px rgba(0, 255, 255, 0.5);
+  border: 1px solid rgba(0, 255, 255, 0.25);
+}
+
+
+.transition-image {
+  width: 30%;
   opacity: 0;
   transition: opacity 0.4s ease;
-  z-index: 15;
-  pointer-events: none;
+  display: block;
+  margin: 0 auto;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
 .image-credit {
-  position: absolute;
-  top: calc(50% + 130px); /* Abstand unter dem Bild */
-  left: 50%;
-  transform: translateX(-50%);
+  display: block;
+  margin-top: 0.5rem;
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   font-weight: 600;
@@ -1055,9 +1061,10 @@ body:not(.futuristic) .layer3 {
   gap: 8px; /* falls du das Label irgendwann gruppieren willst */
   opacity: 0;
   transition: opacity 0.4s ease;
-  z-index: 16;
   pointer-events: none;
+  z-index: 10001;
 }
+
 
 
 
