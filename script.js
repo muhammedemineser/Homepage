@@ -7,9 +7,11 @@
 const navToggle = document.getElementById('navToggle');
 const navbar = document.getElementById('navbar');
 
-navToggle.addEventListener('click', () => {
+if (navToggle && navbar) {
+  navToggle.addEventListener('click', () => {
     navbar.classList.toggle('show');
-});
+  });
+}
 
 // Smooth scroll for anchor links
 document.addEventListener("DOMContentLoaded", function () {
@@ -83,6 +85,7 @@ function playAnimation(element, animationName) {
   element.style.animation = `${animationName} 1s forwards`;
 }
 
+if (themeToggle) {
 themeToggle.addEventListener("click", () => {
   const isDark = document.documentElement.classList.toggle("dark");
 
@@ -191,8 +194,8 @@ themeToggle.addEventListener("click", () => {
             ? "media/vergleich_produktbilder.png"
             : "media/vergleich_produktbilder_weiss.png";
     }
-}});
-
+  });
+}
 
 // Interactive portfolio items
 portfolioItems.forEach(item => {
