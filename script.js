@@ -79,6 +79,34 @@ filterButtons.forEach(btn => {
 const sun = document.getElementById("sunIcon");
 const moon = document.getElementById("moonIcon");
 
+function applyStoredTheme() {
+  const saved = localStorage.getItem('theme');
+  if (!saved) return;
+  const isDark = saved === 'dark';
+  document.documentElement.classList.toggle('dark', isDark);
+  document.body.classList.toggle('futuristic', isDark);
+
+  if (sun && moon) {
+    if (isDark) {
+      sun.classList.remove('visible');
+      moon.classList.add('visible');
+    } else {
+      moon.classList.remove('visible');
+      sun.classList.add('visible');
+    }
+  }
+
+  const toggleLabel = document.getElementById('toggleLabel');
+  if (toggleLabel) {
+    if (!toggleLabel.dataset.original) {
+      toggleLabel.dataset.original = toggleLabel.innerHTML;
+    }
+    toggleLabel.innerHTML = isDark ? 'Dunkel' : toggleLabel.dataset.original;
+  }
+}
+
+document.addEventListener('DOMContentLoaded', applyStoredTheme);
+
 function playAnimation(element, animationName) {
   element.style.animation = "none"; // reset
   void element.offsetWidth;         // force reflow
@@ -88,6 +116,7 @@ function playAnimation(element, animationName) {
 if (themeToggle) {
 themeToggle.addEventListener("click", () => {
   const isDark = document.documentElement.classList.toggle("dark");
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
 
  if (isDark) {
     playAnimation(sun, "fadeOut");
