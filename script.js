@@ -394,45 +394,89 @@ window.addEventListener('load', () => {
 
   // ---------- Page transition logic ----------
 (function(){
-  const addTransitionMarkup = () => {
-    if (document.querySelector('.layers')) return;
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = 'transitionEffect/style.css';
-    document.head.appendChild(link);
+const addTransitionMarkup = () => {
+  if (document.querySelector('.layers')) return;
 
-    const section = document.createElement('section');
-    section.className = 'layers';
-    section.style.display = 'none';
-    section.innerHTML = `\n  <div class="layer layer1"></div>\n  <div class="layer layer2"></div>\n  <div class="layer layer3"></div>`;
-    document.body.prepend(section);
-  };
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = 'transitionEffect/style.css';
+  document.head.appendChild(link);
 
-  const playTransition = () => {
-    const overlay = document.querySelector('.layers');
-    if (!overlay || typeof anime === 'undefined') return;
-    overlay.style.display = 'block';
-   anime({
-  targets: '.layer',
-  rotateY: [
-    { value: 200, duration: 1000 },
-    { value: -1, duration: 1000 },
-    { value: 0, duration: 1000 }
-  ],
-  opacity: [
-    { value: 1, duration: 0 },
-    { value: 0.5, duration: 1250},         // Start bei voller Sichtbarkeit
-    { value: 0, duration: 1500 }       // Fade-out über 2.5 Sekunden
-  ],
-  easing: 'easeInOutSine',
-  loop: false,
-  direction: 'normal',
-  delay: anime.stagger(150)
-});
-    setTimeout(() => {
-      overlay.style.display = 'none';
-    }, 1500);
-  };
+  const section = document.createElement('section');
+  section.className = 'layers';
+  section.style.display = 'none';
+
+  section.innerHTML = `
+    <div class="layer layer1"></div>
+    <div class="layer layer2"></div>
+    <div class="layer layer3"></div>
+    <img src="meinIcon.png" class="transition-image" />
+    <span class="image-credit">Presented by Mee Studios</span>
+  `;
+
+  document.body.prepend(section);
+};
+
+
+ const playTransition = () => {
+  const overlay = document.querySelector('.layers');
+  if (!overlay || typeof anime === 'undefined') return;
+
+  overlay.style.display = 'block';
+
+  anime.timeline()
+    .add({
+      targets: '.layer',
+      rotateY: 180,
+      duration: 800,
+      easing: 'easeInOutQuad'
+    })
+    .add({
+      targets: '.layer',
+      boxShadow: '0 0 90px 18px rgba(0,255,255,0.8)',
+      duration: 600,
+      easing: 'easeInOutQuad',
+     begin: () => {
+  anime({
+    targets: '.transition-image',
+    opacity: [0, 1],
+    scale: [0.95, 1],
+    duration: 400,
+    easing: 'easeOutQuad'
+  });
+  anime({
+    targets: '.image-credit',
+    opacity: [0, 1],
+    scale: [0.95, 1],
+    duration: 400,
+    delay: 100,
+    easing: 'easeOutQuad'
+  });
+}
+    })
+    .add({
+      targets: '.layer',
+      opacity: 0,
+      duration: 800,
+      easing: 'easeInOutQuad',
+     complete: () => {
+  anime({
+    targets: ['.transition-image', '.image-credit'],
+    opacity: [1, 0],
+    scale: [1, 0.9],
+    duration: 500,
+    easing: 'easeInOutQuad'
+  });
+}
+    });
+
+
+
+  // Overlay nach Animation wieder ausblenden
+  setTimeout(() => {
+    overlay.style.display = 'none';
+  }, 2300); // Dauer sollte zu Timeline passen
+};
 
   const prepareAnchors = () => {
     document.querySelectorAll('a[href$=".html"]').forEach(a => {
