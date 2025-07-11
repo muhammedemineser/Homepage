@@ -227,6 +227,10 @@ canvas {
     margin-bottom: 1rem;
 }
 
+.skills .skill span i {
+    margin-right: 0.5rem;
+}
+
 .skills .progress {
     background: #ddd;
     height: 8px;
