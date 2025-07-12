@@ -43,7 +43,7 @@ window.addEventListener('DOMContentLoaded', () => {
     toggleBtn.addEventListener('click', () => {
       // wait for main script to toggle classes
       setTimeout(() => {
-        const isDark = document.body.classList.contains('futuristic');
+        const isDark = !document.body.classList.contains('futuristic');
         toggleLabel.textContent = isDark ? 'Dunkel' : 'Hell';
       }, 0);
     });

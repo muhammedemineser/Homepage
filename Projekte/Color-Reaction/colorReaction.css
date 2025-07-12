@@ -19,7 +19,7 @@ body {
     --grey: #b4b0bd;
 }
 
-body:not(.futuristic) h1 {
+body.futuristic h1 {
       display: flex;
   align-items: center;
   justify-content: center;
@@ -31,7 +31,7 @@ body:not(.futuristic) h1 {
     color: black;
 }
 
-body.futuristic h1 {
+body:not(.futuristic) h1 {
         display: flex;
   align-items: center;
   justify-content: center;
@@ -42,7 +42,7 @@ body.futuristic h1 {
   padding: 0;
 }
 
-body:not(.futuristic) h2 {
+body.futuristic h2 {
       display: flex;
   align-items: center;
   color: var(--grey);
@@ -55,7 +55,7 @@ body:not(.futuristic) h2 {
   color: black;
 }
 
-body.futuristic h2 {
+body:not(.futuristic) h2 {
       display: flex;
   align-items: center;
   color: rgba(255, 255, 255, 0.7);
@@ -67,7 +67,7 @@ body.futuristic h2 {
   height: 7vh;
 }
 
-body:not(.futuristic) p {
+body.futuristic p {
       font-family: "Montserrat", sans-serif;
   font-weight: 600;
   min-height: 1rem; 
@@ -77,7 +77,7 @@ body:not(.futuristic) p {
   margin-left: 3%;
 }
 
-body.futuristic p {
+body:not(.futuristic) p {
       font-family: "Montserrat", sans-serif;
   font-weight: 600;
   min-height: 1rem; 
@@ -87,8 +87,8 @@ body.futuristic p {
   margin-left: 3%;
 }
 
-body:not(.futuristic) ul li, 
-body:not(.futuristic) #postLaunchResearch div strong {
+body.futuristic ul li, 
+body.futuristic #postLaunchResearch div strong {
     font-family: "Montserrat", sans-serif;
   font-weight: 600;
   min-height: 1rem; 
@@ -98,7 +98,7 @@ body:not(.futuristic) #postLaunchResearch div strong {
   margin-left: 3%;
 }
 
-body.futuristic ul li, #postLaunchResearch div strong {
+body:not(.futuristic) ul li, #postLaunchResearch div strong {
     font-family: "Montserrat", sans-serif;
   font-weight: 600;
   min-height: 1rem; 
@@ -133,36 +133,13 @@ height:auto;
     white-space: nowrap;
 }
 
-body.futuristic .toolItem label {
+body:not(.futuristic) .toolItem label {
   margin: 20px;
   color: white;
 }
 
 .toolItem label {
   margin: 20px;
-}
-
-body.futuristic,
-body.futuristic h1,
-body.futuristic h2,
-body.futuristic h3,
-body.futuristic h4,
-body.futuristic h5,
-body.futuristic h6,
-body.futuristic p,
-body.futuristic li,
-body.futuristic .productText h3,
-body.futuristic #empathyWrapper h3,
-body.futuristic .productText :is(p, ul li),
-body.futuristic #empathyGrid :is(ul li),
-body.futuristic #empathyWrapper :is(ul li),
-body.futuristic #empathyGrid ul li,
-body.futuristic .rollen,
-body.futuristic .rollen.Sec,
-body.futuristic .label,
-body.futuristic .skip-link,
-body.futuristic .beforeAfterIA li {
-  color: white !important;
 }
 
 body:not(.futuristic),
@@ -184,23 +161,46 @@ body:not(.futuristic) .rollen,
 body:not(.futuristic) .rollen.Sec,
 body:not(.futuristic) .label,
 body:not(.futuristic) .skip-link,
-body:not(.futuristic) .cartoonText,
 body:not(.futuristic) .beforeAfterIA li {
+  color: white !important;
+}
+
+body.futuristic,
+body.futuristic h1,
+body.futuristic h2,
+body.futuristic h3,
+body.futuristic h4,
+body.futuristic h5,
+body.futuristic h6,
+body.futuristic p,
+body.futuristic li,
+body.futuristic .productText h3,
+body.futuristic #empathyWrapper h3,
+body.futuristic .productText :is(p, ul li),
+body.futuristic #empathyGrid :is(ul li),
+body.futuristic #empathyWrapper :is(ul li),
+body.futuristic #empathyGrid ul li,
+body.futuristic .rollen,
+body.futuristic .rollen.Sec,
+body.futuristic .label,
+body.futuristic .skip-link,
+body.futuristic .cartoonText,
+body.futuristic .beforeAfterIA li {
   color: black !important;
 }
 
-body:not(.futuristic) #postLaunchResearch,
-body:not(.futuristic) #postLaunchResearch [style*="background: #fff"],
-body:not(.futuristic) #postLaunchResearch [style*="background: #f9f9f9"] {
+body.futuristic #postLaunchResearch,
+body.futuristic #postLaunchResearch [style*="background: #fff"],
+body.futuristic #postLaunchResearch [style*="background: #f9f9f9"] {
   background: rgba(6, 6, 6, 0.1) !important;
 }
 
-body.futuristic #rueckblick {
+body:not(.futuristic) #rueckblick {
   background: white !important;
   color: black !important;
 }
 
-body.futuristic #empathyMedia {
+body:not(.futuristic) #empathyMedia {
   opacity: 0.8 !important;
 }
 
