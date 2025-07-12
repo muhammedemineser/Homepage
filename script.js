@@ -7,9 +7,11 @@
 const navToggle = document.getElementById('navToggle');
 const navbar = document.getElementById('navbar');
 
-navToggle.addEventListener('click', () => {
+if (navToggle && navbar) {
+  navToggle.addEventListener('click', () => {
     navbar.classList.toggle('show');
-});
+  });
+}
 
 // Smooth scroll for anchor links
 document.addEventListener("DOMContentLoaded", function () {
@@ -74,8 +76,96 @@ filterButtons.forEach(btn => {
     });
 });
 
-const sun = document.getElementById("sunIcon");
-const moon = document.getElementById("moonIcon");
+const sun = document.getElementById('sunIcon');
+const moon = document.getElementById('moonIcon');
+
+function updateThemeAssets(isDark) {
+  const personaImg = document.querySelector('img[alt="User Persona"]');
+  if (personaImg) {
+    personaImg.src = isDark
+      ? 'media/Google UX Design Certificate - Persona [Template] (2).png'
+      : 'media/Persona_weiss.jpeg';
+  }
+
+  const empathyImages = document.querySelectorAll('.empathy-map');
+  if (empathyImages.length === 3) {
+    empathyImages[0].src = isDark
+      ? 'media/Amina S._20250426_104117_0000.png'
+      : 'media/Amina_weiss.png';
+    empathyImages[1].src = isDark
+      ? 'media/Mehmet T._20250426_104927_0000.png'
+      : 'media/Mehmet_weiss.png';
+    empathyImages[2].src = isDark
+      ? 'media/Serhat K._20250426_103242_0000.png'
+      : 'media/Serhat_weiss.png';
+  }
+
+  const visionImages = document.querySelectorAll('.vision-map');
+  if (visionImages.length === 3) {
+    visionImages[0].src = isDark
+      ? 'media/Fuse Tea - Benutzergeschichten [Template].png'
+      : 'media/Benutzergeschichten_Amina_Weiss.png';
+    visionImages[1].src = isDark
+      ? 'media/Fuse Tea - Benutzergeschichten [Template] (1).png'
+      : 'media/Benutzergeschichten_Serhat_Weiss.png';
+    visionImages[2].src = isDark
+      ? 'media/Fuse Tea - Benutzergeschichten [Template] (2).png'
+      : 'media/Benutzergeschichten_Mehmet_Weiss.png';
+  }
+
+  const skipSymbol = document.getElementById('skipSymbol');
+  if (skipSymbol) {
+    skipSymbol.src = isDark ? 'media/skipSymbol.png' : 'media/skipSymbol_lila.png';
+  }
+
+  const wireframe = document.querySelector('.item-row1');
+  if (wireframe) {
+    wireframe.style.backgroundImage = isDark
+      ? "url('media/vorher_nachher_wireframe.png')"
+      : "url('media/wireframe_weiss.png')";
+  }
+
+  const products = document.getElementById('products');
+  if (products) {
+    products.src = isDark
+      ? 'media/vergleich_produktbilder.png'
+      : 'media/vergleich_produktbilder_weiss.png';
+  }
+}
+
+function applyStoredTheme() {
+  const saved = localStorage.getItem('theme');
+  if (!saved) return;
+  const isDark = saved === 'dark';
+  document.documentElement.classList.toggle('dark', isDark);
+  document.body.classList.toggle('futuristic', isDark);
+
+  if (sun && moon) {
+    if (isDark) {
+      sun.classList.remove('visible');
+      moon.classList.add('visible');
+    } else {
+      moon.classList.remove('visible');
+      sun.classList.add('visible');
+    }
+  }
+
+  const toggleLabel = document.getElementById('toggleLabel');
+  if (toggleLabel) {
+    if (!toggleLabel.dataset.original) {
+      toggleLabel.dataset.original = toggleLabel.innerHTML;
+    }
+    toggleLabel.innerHTML = isDark ? 'Dunkel' : toggleLabel.dataset.original;
+  }
+
+  updateThemeAssets(isDark);
+}
+
+if (document.readyState !== 'loading') {
+  applyStoredTheme();
+} else {
+  document.addEventListener('DOMContentLoaded', applyStoredTheme);
+}
 
 function playAnimation(element, animationName) {
   element.style.animation = "none"; // reset
@@ -83,8 +173,11 @@ function playAnimation(element, animationName) {
   element.style.animation = `${animationName} 1s forwards`;
 }
 
-themeToggle.addEventListener("click", () => {
-  const isDark = document.documentElement.classList.toggle("dark");
+if (themeToggle) {
+themeToggle.addEventListener('click', () => {
+  const isDark = document.documentElement.classList.toggle('dark');
+  document.body.classList.toggle('futuristic', isDark);
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
 
  if (isDark) {
     playAnimation(sun, "fadeOut");
@@ -101,7 +194,6 @@ themeToggle.addEventListener("click", () => {
       playAnimation(sun, "fadeIn");
     }, 1000);
   }
-
 
     const toggleLabel = document.getElementById("toggleLabel");
     if (!toggleLabel.dataset.original) {
@@ -130,69 +222,10 @@ themeToggle.addEventListener("click", () => {
   }, 1000);
 }
 
-    const isFuturistic = document.body.classList.contains('futuristic');
-    document.body.classList.toggle('futuristic');
+     updateThemeAssets(isDark);
 
-    // ✅ Persona-Bild
-    const personaImg = document.querySelector('img[alt="User Persona"]');
-    if (personaImg) {
-        personaImg.src = isFuturistic
-            ? "media/Google UX Design Certificate - Persona [Template] (2).png"
-            : "media/Persona_weiss.jpeg";
-    }
-
-    // ✅ Empathy Maps
-    const empathyImages = document.querySelectorAll('.empathy-map');
-    if (empathyImages.length === 3) {
-        empathyImages[0].src = isFuturistic
-            ? "media/Amina S._20250426_104117_0000.png"
-            : "media/Amina_weiss.png";
-        empathyImages[1].src = isFuturistic
-            ? "media/Mehmet T._20250426_104927_0000.png"
-            : "media/Mehmet_weiss.png";
-        empathyImages[2].src = isFuturistic
-            ? "media/Serhat K._20250426_103242_0000.png"
-            : "media/Serhat_weiss.png";
-    
-    // Vision Maps
-    const visionImages = document.querySelectorAll('.vision-map');
-    if (visionImages.length === 3) {
-        visionImages[0].src = isFuturistic
-            ? "media/Fuse Tea - Benutzergeschichten [Template].png"
-            : "media/Benutzergeschichten_Amina_Weiss.png";
-        visionImages[1].src = isFuturistic
-            ? "media/Fuse Tea - Benutzergeschichten [Template] (1).png"
-            : "media/Benutzergeschichten_Serhat_Weiss.png";
-        visionImages[2].src = isFuturistic
-            ? "media/Fuse Tea - Benutzergeschichten [Template] (2).png"
-            : "media/Benutzergeschichten_Mehmet_Weiss.png";
-    }
-
-    // Skip-Symbol
-    const skipSymbol = document.getElementById('skipSymbol');
-    if (skipSymbol) {
-        skipSymbol.src = isFuturistic
-            ? "media/skipSymbol.png"
-            : "media/skipSymbol_lila.png";
-    }
-
-    // Wireframe-Hintergrund
-    const wireframe = document.querySelector('.item-row1');
-    if (wireframe) {
-        wireframe.style.backgroundImage = isFuturistic
-            ? "url('media/vorher_nachher_wireframe.png')"
-            : "url('media/wireframe_weiss.png')";
-    }
-
-    // vergleich Produktbilder
-    const products = document.getElementById("products");
-    if (products) {
-        products.src = isFuturistic
-            ? "media/vergleich_produktbilder.png"
-            : "media/vergleich_produktbilder_weiss.png";
-    }
-}});
-
+  });
+}
 
 // Interactive portfolio items
 portfolioItems.forEach(item => {
@@ -394,45 +427,85 @@ window.addEventListener('load', () => {
 
   // ---------- Page transition logic ----------
 (function(){
-  const addTransitionMarkup = () => {
-    if (document.querySelector('.layers')) return;
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = 'transitionEffect/style.css';
-    document.head.appendChild(link);
+const addTransitionMarkup = () => {
+  if (document.querySelector('.layers')) return;
+  
+  const section = document.createElement('section');
+  section.className = 'layers';
+  section.style.display = 'none';
 
-    const section = document.createElement('section');
-    section.className = 'layers';
-    section.style.display = 'none';
-    section.innerHTML = `\n  <div class="layer layer1"></div>\n  <div class="layer layer2"></div>\n  <div class="layer layer3"></div>`;
-    document.body.prepend(section);
-  };
+  section.innerHTML = `
+    <div class="layer layer1"></div>
+    <div class="layer layer2"></div>
+    <div class="layer layer3"></div>
+    <div class="transition-content">
+      <img src="meinIcon.png" class="transition-image" />
+      <span class="image-credit">Presented by Mee Studios</span>
+    </div>
+  `;
+  document.body.prepend(section);
+};
 
-  const playTransition = () => {
-    const overlay = document.querySelector('.layers');
-    if (!overlay || typeof anime === 'undefined') return;
-    overlay.style.display = 'block';
-   anime({
-  targets: '.layer',
-  rotateY: [
-    { value: 200, duration: 1000 },
-    { value: -1, duration: 1000 },
-    { value: 0, duration: 1000 }
-  ],
-  opacity: [
-    { value: 1, duration: 0 },
-    { value: 0.5, duration: 1250},         // Start bei voller Sichtbarkeit
-    { value: 0, duration: 1500 }       // Fade-out über 2.5 Sekunden
-  ],
-  easing: 'easeInOutSine',
-  loop: false,
-  direction: 'normal',
-  delay: anime.stagger(150)
-});
-    setTimeout(() => {
-      overlay.style.display = 'none';
-    }, 1500);
-  };
+
+ const playTransition = () => {
+  const overlay = document.querySelector('.layers');
+  if (!overlay || typeof anime === 'undefined') return;
+
+  overlay.style.display = 'block';
+
+  anime.timeline()
+    .add({
+      targets: '.layer',
+      rotateY: 180,
+      duration: 800,
+      easing: 'easeInOutQuad'
+    })
+    .add({
+      targets: '.layer',
+      boxShadow: '0 0 90px 18px rgba(0,255,255,0.8)',
+      duration: 600,
+      easing: 'easeInOutQuad',
+     begin: () => {
+  anime({
+    targets: '.transition-image',
+    opacity: [0, 1],
+    scale: [0.95, 1],
+    duration: 400,
+    easing: 'easeOutQuad'
+  });
+  anime({
+    targets: '.image-credit',
+    opacity: [0, 1],
+    scale: [0.95, 1],
+    duration: 400,
+    delay: 100,
+    easing: 'easeOutQuad'
+  });
+}
+    })
+    .add({
+      targets: '.layer',
+      opacity: 0,
+      duration: 800,
+      easing: 'easeInOutQuad',
+     complete: () => {
+  anime({
+    targets: ['.transition-image', '.image-credit'],
+    opacity: [1, 0],
+    scale: [1, 0.9],
+    duration: 500,
+    easing: 'easeInOutQuad'
+  });
+}
+    });
+
+
+
+  // Overlay nach Animation wieder ausblenden
+  setTimeout(() => {
+    overlay.style.display = 'none';
+  }, 2300); // Dauer sollte zu Timeline passen
+};
 
   const prepareAnchors = () => {
     document.querySelectorAll('a[href$=".html"]').forEach(a => {

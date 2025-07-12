@@ -270,7 +270,9 @@ canvas {
     font-family: "Montserrat", sans-serif;
     margin: 0 4px;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: background-color 0.3s, color 0.3s;
+    border: 1px solid transparent;
+    box-shadow: none;
     background-color: rgba(255, 255, 255, 0.2); /* Transparenter Hintergrund */
     backdrop-filter: blur(60px); /* Verschwommenheit */
     -webkit-backdrop-filter: blur(60px); /* Für Safari */
@@ -392,7 +394,8 @@ body.futuristic .site-footer {
     border: 1px solid var(--primary);
     border-radius: 4px;
     font: inherit;
-    background: rgba(255, 255, 255, 0.1);
+backdrop-filter: blur(6px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  background: rgba(255, 255, 255, 0.1);
     color: var(--light);
 }
 
@@ -429,7 +432,7 @@ body:not(futuristic) .contact textarea {
   max-width: 600px;
   margin-left: 0;
   box-sizing: border-box;
-
+ background:  rgba(255, 255, 255, 0.1);
   /* Optional: use padding ONLY if it doesn’t interfere with child layout */
   padding: 2rem;
 }
@@ -924,10 +927,10 @@ animation-fill-mode: forwards;
 }
 /*anime.js */
 .layers {
-  width: 98vw;
-  height: 93vh;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
   perspective: 1000px;
   overflow: hidden;
@@ -973,5 +976,89 @@ animation-fill-mode: forwards;
   border-radius: 18px;
   box-shadow: 0 0 24px 3px rgba(0, 255, 255, 0.3);
   border: 1px solid rgba(0, 255, 255, 0.15);
+}
+
+body:not(.futuristic) .layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(120deg,
+      rgba(94, 58, 137, 0.6),
+      rgba(111, 75, 165, 0.6),
+      rgba(62, 84, 163, 0.6));  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  box-shadow: 0 0 32px 5px rgba(0, 255, 255, 0.5);
+  border: 1px solid rgba(0, 255, 255, 0.5);
+}
+
+body:not(.futuristic) .layer2 {
+  background: linear-gradient(300deg, rgba(62, 84, 163, 0.5), rgba(111, 75, 165, 0.5));
+  backdrop-filter: blur(14px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateZ(-30px);
+  border-radius: 18px;
+  box-shadow: 0 0 28px 4px rgba(0, 255, 255, 0.4);
+  border: 1px solid rgba(0, 255, 255, 0.65);
+}
+
+body:not(.futuristic) .layer3 {
+  background: linear-gradient(45deg, rgba(111, 75, 165, 0.65), rgba(94, 58, 137, 0.65));
+  backdrop-filter: blur(18px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateZ(-60px);
+  border-radius: 18px;
+  box-shadow: 0 0 24px 3px rgba(0, 255, 255, 0.7);
+  border: 1px solid rgba(0, 255, 255, 0.25);
+}
+
+.layer {
+  will-change: transform, opacity, box-shadow;
+}
+
+.transition-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+  z-index: 10000;
+  background: linear-gradient(120deg, rgba(94, 58, 137, 0.7), rgba(111, 75, 165, 0.7), rgba(62, 84, 163, 0.7));
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  box-shadow: 0 0 32px 5px rgba(0, 255, 255, 0.5);
+  border: 1px solid rgba(0, 255, 255, 0.25);
+}
+
+
+.transition-image {
+  width: 30%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+.image-credit {
+  display: block;
+  margin-top: 0.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.06em;
+  gap: 8px; /* falls du das Label irgendwann gruppieren willst */
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 10001;
 }
 
