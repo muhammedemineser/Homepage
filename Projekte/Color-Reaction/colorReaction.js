@@ -5,6 +5,15 @@ window.addEventListener('DOMContentLoaded', () => {
       iframe.src = iframe.dataset.src;
     }
   };
+<<<<<<< HEAD
+=======
+
+  if (sessionStorage.getItem('showTransition') === 'true') {
+    setTimeout(loadIframe, 2400);
+  } else {
+    loadIframe();
+  }
+>>>>>>> 1b4ad84c3e23b5b76eab4bf1b5fccd4c61330f83
 
   if (sessionStorage.getItem('showTransition') === 'true') {
     setTimeout(loadIframe, 2400);
@@ -24,4 +33,19 @@ window.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('section').forEach(sec => {
     sec.style.opacity = '0';
     observer.observe(sec);
-  });});
+  });
+
+  // Ensure theme toggle label switches between "Hell" and "Dunkel"
+  const toggleBtn = document.getElementById('themeToggle');
+  const toggleLabel = document.getElementById('toggleLabel');
+
+  if (toggleBtn && toggleLabel) {
+    toggleBtn.addEventListener('click', () => {
+      // wait for main script to toggle classes
+      setTimeout(() => {
+        const isDark = document.body.classList.contains('futuristic');
+        toggleLabel.textContent = isDark ? 'Dunkel' : 'Hell';
+      }, 0);
+    });
+  }
+});

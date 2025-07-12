@@ -38,7 +38,7 @@ body.futuristic {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 13;
 }
 
 body.futuristic .site-header {

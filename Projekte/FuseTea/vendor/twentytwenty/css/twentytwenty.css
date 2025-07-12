@@ -24,26 +24,26 @@
   position: absolute;
   top: 0;
   width: 100%;
-  height: 100%; z-index: 100;
+  height: 100%; z-index: 11;
 }
 
 .twentytwenty-before-label, .twentytwenty-after-label, .twentytwenty-overlay {
   -webkit-transition-duration: 0.5s;
   -moz-transition-duration: 0.5s;
-  transition-duration: 0.5s;z-index: 100;
+  transition-duration: 0.5s;z-index: 11;
  }
 
 .twentytwenty-before-label, .twentytwenty-after-label {
   -webkit-transition-property: opacity;
   -moz-transition-property: opacity;
-  transition-property: opacity;z-index: 100;
+  transition-property: opacity;z-index: 11;
  }
 
 .twentytwenty-before-label:before, .twentytwenty-after-label:before {
   color: white;
   font-size: 13px;
   letter-spacing: 0.1em; 
-font-family: "Montserrat", sans-serif;z-index: 100;
+font-family: "Montserrat", sans-serif;z-index: 11;
 
 }
 
@@ -54,19 +54,19 @@ font-family: "Montserrat", sans-serif;z-index: 100;
   padding: 0 20px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  border-radius: 2px;z-index: 100;
+  border-radius: 2px;z-index: 11;
  }
 
 .twentytwenty-horizontal .twentytwenty-before-label:before, .twentytwenty-horizontal .twentytwenty-after-label:before {
   top: 50%;
-  margin-top: -19px; z-index: 100;
+  margin-top: -19px; z-index: 11;
  }
 
 .twentytwenty-vertical .twentytwenty-before-label:before, .twentytwenty-vertical .twentytwenty-after-label:before {
   left: 50%;
   margin-left: -45px;
   text-align: center;
-  width: 90px; z-index: 100;
+  width: 90px; z-index: 11;
 }
 
 .twentytwenty-left-arrow, .twentytwenty-right-arrow, .twentytwenty-up-arrow, .twentytwenty-down-arrow {

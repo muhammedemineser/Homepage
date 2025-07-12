@@ -37,7 +37,7 @@ body.futuristic {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 13;
 }
 
 body.futuristic .site-header {
@@ -227,6 +227,10 @@ canvas {
     margin-bottom: 1rem;
 }
 
+.skills .skill span i {
+    margin-right: 0.5rem;
+}
+
 .skills .progress {
     background: #ddd;
     height: 8px;
@@ -286,6 +290,7 @@ body.futuristic .filter button {
 .filter button.active,
 .filter button:hover {
     border: 1px solid var(--primary);
+    box-shadow: none;
 }
 
 .portfolio-grid {
@@ -984,10 +989,15 @@ body:not(.futuristic) .layer {
   position: absolute;
   top: 0;
   left: 0;
+<<<<<<< HEAD
   background: linear-gradient(120deg,
       rgba(94, 58, 137, 0.6),
       rgba(111, 75, 165, 0.6),
       rgba(62, 84, 163, 0.6));  backdrop-filter: blur(10px);
+=======
+  background: linear-gradient(120deg, rgba(94, 58, 137, 0.6), rgba(111, 75, 165, 0.6), rgba(62, 84, 163, 0.6));
+  backdrop-filter: blur(10px);
+>>>>>>> 1b4ad84c3e23b5b76eab4bf1b5fccd4c61330f83
   border-radius: 18px;
   box-shadow: 0 0 32px 5px rgba(0, 255, 255, 0.5);
   border: 1px solid rgba(0, 255, 255, 0.5);
@@ -1062,3 +1072,9 @@ body:not(.futuristic) .layer3 {
   z-index: 10001;
 }
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 1b4ad84c3e23b5b76eab4bf1b5fccd4c61330f83

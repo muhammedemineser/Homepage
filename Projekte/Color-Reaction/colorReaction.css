@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1b4ad84c3e23b5b76eab4bf1b5fccd4c61330f83
 html {
   scroll-behavior: smooth;
   width: 100%;
@@ -10,7 +13,7 @@ body {
     width: 100%;
     background-color: #f4f4f4;
     overflow-x: hidden;
-    font-family: "montserrat", sans;
+    font-family: "Montserrat", sans;
 }
 :root {
     --grey: #b4b0bd;
@@ -20,7 +23,7 @@ body:not(.futuristic) h1 {
       display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 2.5rem;
   font-weight: 500;
     margin: 5% 0 0 0;
@@ -32,7 +35,7 @@ body.futuristic h1 {
         display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 2.5rem;
   font-weight: 500;
     margin: 5% 0 0 0;
@@ -46,7 +49,7 @@ body:not(.futuristic) h2 {
   width: 90vw;
   font-size: 1.8rem;
   font-weight: 700;
-  font-family: "montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 3% 10% 0% 10%;
   height: 7vh;
   color: black;
@@ -59,13 +62,13 @@ body.futuristic h2 {
   width: 90vw;
   font-size: 1.8rem;
   font-weight: 700;
-  font-family: "montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 3% 10% 0% 10%;
   height: 7vh;
 }
 
 body:not(.futuristic) p {
-      font-family: "montserrat", sans-serif;
+      font-family: "Montserrat", sans-serif;
   font-weight: 600;
   min-height: 1rem; 
   color: black;
@@ -75,7 +78,7 @@ body:not(.futuristic) p {
 }
 
 body.futuristic p {
-      font-family: "montserrat", sans-serif;
+      font-family: "Montserrat", sans-serif;
   font-weight: 600;
   min-height: 1rem; 
   color: white;
@@ -86,7 +89,7 @@ body.futuristic p {
 
 body:not(.futuristic) ul li, 
 body:not(.futuristic) #postLaunchResearch div strong {
-    font-family: "montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
   font-weight: 600;
   min-height: 1rem; 
   color: black;
@@ -96,7 +99,7 @@ body:not(.futuristic) #postLaunchResearch div strong {
 }
 
 body.futuristic ul li, #postLaunchResearch div strong {
-    font-family: "montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
   font-weight: 600;
   min-height: 1rem; 
   color: #fff;
@@ -110,14 +113,14 @@ body.futuristic ul li, #postLaunchResearch div strong {
 }
 
 #postLaunchResearch div strong {
-  font-family: "montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight:600;
   font-size: 1.2rem;
   margin: 15px;
 }
 
 #postLaunchResearch div{
-  font-family: "montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 1rem;
 }
@@ -204,7 +207,7 @@ body.futuristic #empathyMedia {
 .logo {
     font-size: 1.5rem;
     font-weight: 600;
-    font-family: 'montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .site-nav {
@@ -216,13 +219,10 @@ body.futuristic #empathyMedia {
     color: var(--light);
     text-decoration: none;
     transition: color 0.3s;
-    font-family: 'montserrat', sans-serif !important;
-    font-size: 600;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600;
 }
 
-.site-nav a {
-  font-family: 'Montserrat', sans-serif !important;
-}
 
 .site-nav a:hover {
     color: var(--primary);
