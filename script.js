@@ -76,8 +76,96 @@ filterButtons.forEach(btn => {
     });
 });
 
-const sun = document.getElementById("sunIcon");
-const moon = document.getElementById("moonIcon");
+const sun = document.getElementById('sunIcon');
+const moon = document.getElementById('moonIcon');
+
+function updateThemeAssets(isDark) {
+  const personaImg = document.querySelector('img[alt="User Persona"]');
+  if (personaImg) {
+    personaImg.src = isDark
+      ? 'media/Google UX Design Certificate - Persona [Template] (2).png'
+      : 'media/Persona_weiss.jpeg';
+  }
+
+  const empathyImages = document.querySelectorAll('.empathy-map');
+  if (empathyImages.length === 3) {
+    empathyImages[0].src = isDark
+      ? 'media/Amina S._20250426_104117_0000.png'
+      : 'media/Amina_weiss.png';
+    empathyImages[1].src = isDark
+      ? 'media/Mehmet T._20250426_104927_0000.png'
+      : 'media/Mehmet_weiss.png';
+    empathyImages[2].src = isDark
+      ? 'media/Serhat K._20250426_103242_0000.png'
+      : 'media/Serhat_weiss.png';
+  }
+
+  const visionImages = document.querySelectorAll('.vision-map');
+  if (visionImages.length === 3) {
+    visionImages[0].src = isDark
+      ? 'media/Fuse Tea - Benutzergeschichten [Template].png'
+      : 'media/Benutzergeschichten_Amina_Weiss.png';
+    visionImages[1].src = isDark
+      ? 'media/Fuse Tea - Benutzergeschichten [Template] (1).png'
+      : 'media/Benutzergeschichten_Serhat_Weiss.png';
+    visionImages[2].src = isDark
+      ? 'media/Fuse Tea - Benutzergeschichten [Template] (2).png'
+      : 'media/Benutzergeschichten_Mehmet_Weiss.png';
+  }
+
+  const skipSymbol = document.getElementById('skipSymbol');
+  if (skipSymbol) {
+    skipSymbol.src = isDark ? 'media/skipSymbol.png' : 'media/skipSymbol_lila.png';
+  }
+
+  const wireframe = document.querySelector('.item-row1');
+  if (wireframe) {
+    wireframe.style.backgroundImage = isDark
+      ? "url('media/vorher_nachher_wireframe.png')"
+      : "url('media/wireframe_weiss.png')";
+  }
+
+  const products = document.getElementById('products');
+  if (products) {
+    products.src = isDark
+      ? 'media/vergleich_produktbilder.png'
+      : 'media/vergleich_produktbilder_weiss.png';
+  }
+}
+
+function applyStoredTheme() {
+  const saved = localStorage.getItem('theme');
+  if (!saved) return;
+  const isDark = saved === 'dark';
+  document.documentElement.classList.toggle('dark', isDark);
+  document.body.classList.toggle('futuristic', isDark);
+
+  if (sun && moon) {
+    if (isDark) {
+      sun.classList.remove('visible');
+      moon.classList.add('visible');
+    } else {
+      moon.classList.remove('visible');
+      sun.classList.add('visible');
+    }
+  }
+
+  const toggleLabel = document.getElementById('toggleLabel');
+  if (toggleLabel) {
+    if (!toggleLabel.dataset.original) {
+      toggleLabel.dataset.original = toggleLabel.innerHTML;
+    }
+    toggleLabel.innerHTML = isDark ? 'Dunkel' : toggleLabel.dataset.original;
+  }
+
+  updateThemeAssets(isDark);
+}
+
+if (document.readyState !== 'loading') {
+  applyStoredTheme();
+} else {
+  document.addEventListener('DOMContentLoaded', applyStoredTheme);
+}
 
 function playAnimation(element, animationName) {
   element.style.animation = "none"; // reset
@@ -86,8 +174,10 @@ function playAnimation(element, animationName) {
 }
 
 if (themeToggle) {
-themeToggle.addEventListener("click", () => {
-  const isDark = document.documentElement.classList.toggle("dark");
+themeToggle.addEventListener('click', () => {
+  const isDark = document.documentElement.classList.toggle('dark');
+  document.body.classList.toggle('futuristic', isDark);
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
 
  if (isDark) {
     playAnimation(sun, "fadeOut");
@@ -133,69 +223,7 @@ themeToggle.addEventListener("click", () => {
   }, 1000);
 }
 
-    const isFuturistic = document.body.classList.contains('futuristic');
-    document.body.classList.toggle('futuristic');
-
-    // ✅ Persona-Bild
-    const personaImg = document.querySelector('img[alt="User Persona"]');
-    if (personaImg) {
-        personaImg.src = isFuturistic
-            ? "media/Google UX Design Certificate - Persona [Template] (2).png"
-            : "media/Persona_weiss.jpeg";
-    }
-
-    // ✅ Empathy Maps
-    const empathyImages = document.querySelectorAll('.empathy-map');
-    if (empathyImages.length === 3) {
-        empathyImages[0].src = isFuturistic
-            ? "media/Amina S._20250426_104117_0000.png"
-            : "media/Amina_weiss.png";
-        empathyImages[1].src = isFuturistic
-            ? "media/Mehmet T._20250426_104927_0000.png"
-            : "media/Mehmet_weiss.png";
-        empathyImages[2].src = isFuturistic
-            ? "media/Serhat K._20250426_103242_0000.png"
-            : "media/Serhat_weiss.png";
-
-    }
-
-    // Vision Maps
-    const visionImages = document.querySelectorAll('.vision-map');
-    if (visionImages.length === 3) {
-        visionImages[0].src = isFuturistic
-            ? "media/Fuse Tea - Benutzergeschichten [Template].png"
-            : "media/Benutzergeschichten_Amina_Weiss.png";
-        visionImages[1].src = isFuturistic
-            ? "media/Fuse Tea - Benutzergeschichten [Template] (1).png"
-            : "media/Benutzergeschichten_Serhat_Weiss.png";
-        visionImages[2].src = isFuturistic
-            ? "media/Fuse Tea - Benutzergeschichten [Template] (2).png"
-            : "media/Benutzergeschichten_Mehmet_Weiss.png";
-    }
-
-    // Skip-Symbol
-    const skipSymbol = document.getElementById('skipSymbol');
-    if (skipSymbol) {
-        skipSymbol.src = isFuturistic
-            ? "media/skipSymbol.png"
-            : "media/skipSymbol_lila.png";
-    }
-
-    // Wireframe-Hintergrund
-    const wireframe = document.querySelector('.item-row1');
-    if (wireframe) {
-        wireframe.style.backgroundImage = isFuturistic
-            ? "url('media/vorher_nachher_wireframe.png')"
-            : "url('media/wireframe_weiss.png')";
-    }
-
-    // vergleich Produktbilder
-    const products = document.getElementById("products");
-    if (products) {
-        products.src = isFuturistic
-            ? "media/vergleich_produktbilder.png"
-            : "media/vergleich_produktbilder_weiss.png";
-    }
+  updateThemeAssets(isDark);
   });
 }
 
