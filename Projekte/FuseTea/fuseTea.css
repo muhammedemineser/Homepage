@@ -35,6 +35,7 @@ body:not(.futuristic) {
 
 body.futuristic {
   background-color: #f4f4f4 !important;
+  background-image: none !important;
 }
 
 :root {
