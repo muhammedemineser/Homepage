@@ -25,14 +25,18 @@ html {
   display: none;
 }
 
-body {
+body:not(.futuristic) {
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: #f4f4f4;
+    background-color: #000;
     overflow-x: hidden;
-    display: none;
 }
+
+body.futuristic {
+  background-color: #f4f4f4 !important;
+}
+
 :root {
     --grey: #b4b0bd;
 }
