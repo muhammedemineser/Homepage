@@ -435,10 +435,6 @@ const addTransitionMarkup = () => {
   section.className = 'layers';
   section.style.display = 'none';
 
-  const section = document.createElement('section');
-  section.className = 'layers';
-  section.style.display = 'none';
-
   section.innerHTML = `
     <div class="layer layer1"></div>
     <div class="layer layer2"></div>
