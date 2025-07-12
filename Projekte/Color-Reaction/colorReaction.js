@@ -5,16 +5,6 @@ window.addEventListener('DOMContentLoaded', () => {
       iframe.src = iframe.dataset.src;
     }
   };
-<<<<<<< HEAD
-=======
-
-  if (sessionStorage.getItem('showTransition') === 'true') {
-    setTimeout(loadIframe, 2400);
-  } else {
-    loadIframe();
-  }
->>>>>>> 1b4ad84c3e23b5b76eab4bf1b5fccd4c61330f83
-
   if (sessionStorage.getItem('showTransition') === 'true') {
     setTimeout(loadIframe, 2400);
   } else {
