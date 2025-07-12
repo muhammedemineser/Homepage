@@ -29,10 +29,18 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: #f4f4f4;
     overflow-x: hidden;
     display: none;
 }
+
+body.futuristic {
+    background-color: #f4f4f4;
+}
+
+body:not(.futuristic) {
+    background: radial-gradient(circle at top, #111, #000);
+}
+
 :root {
     --grey: #b4b0bd;
 }
