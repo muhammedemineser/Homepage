@@ -202,14 +202,9 @@ function playAnimation(element, animationName) {
 }
 
 if (themeToggle) {
-<<<<<<< HEAD
 themeToggle.addEventListener('click', () => {
   const isDark = document.documentElement.classList.toggle('dark');
   document.body.classList.toggle('futuristic', isDark);
-=======
-themeToggle.addEventListener("click", () => {
-  const isDark = document.documentElement.classList.toggle("dark");
->>>>>>> 1b4ad84c3e23b5b76eab4bf1b5fccd4c61330f83
   localStorage.setItem('theme', isDark ? 'dark' : 'light');
 
  if (isDark) {
@@ -255,74 +250,8 @@ themeToggle.addEventListener("click", () => {
   }, 1000);
 }
 
-<<<<<<< HEAD
      updateThemeAssets(isDark);
 
-=======
-    const isFuturistic = document.body.classList.contains('futuristic');
-    document.body.classList.toggle('futuristic');
-
-    // ✅ Persona-Bild
-    const personaImg = document.querySelector('img[alt="User Persona"]');
-    if (personaImg) {
-        personaImg.src = isFuturistic
-            ? "media/Google UX Design Certificate - Persona [Template] (2).png"
-            : "media/Persona_weiss.jpeg";
-    }
-
-    // ✅ Empathy Maps
-    const empathyImages = document.querySelectorAll('.empathy-map');
-    if (empathyImages.length === 3) {
-        empathyImages[0].src = isFuturistic
-            ? "media/Amina S._20250426_104117_0000.png"
-            : "media/Amina_weiss.png";
-        empathyImages[1].src = isFuturistic
-            ? "media/Mehmet T._20250426_104927_0000.png"
-            : "media/Mehmet_weiss.png";
-        empathyImages[2].src = isFuturistic
-            ? "media/Serhat K._20250426_103242_0000.png"
-            : "media/Serhat_weiss.png";
-
-    }
-
-    // Vision Maps
-    const visionImages = document.querySelectorAll('.vision-map');
-    if (visionImages.length === 3) {
-        visionImages[0].src = isFuturistic
-            ? "media/Fuse Tea - Benutzergeschichten [Template].png"
-            : "media/Benutzergeschichten_Amina_Weiss.png";
-        visionImages[1].src = isFuturistic
-            ? "media/Fuse Tea - Benutzergeschichten [Template] (1).png"
-            : "media/Benutzergeschichten_Serhat_Weiss.png";
-        visionImages[2].src = isFuturistic
-            ? "media/Fuse Tea - Benutzergeschichten [Template] (2).png"
-            : "media/Benutzergeschichten_Mehmet_Weiss.png";
-    }
-
-    // Skip-Symbol
-    const skipSymbol = document.getElementById('skipSymbol');
-    if (skipSymbol) {
-        skipSymbol.src = isFuturistic
-            ? "media/skipSymbol.png"
-            : "media/skipSymbol_lila.png";
-    }
-
-    // Wireframe-Hintergrund
-    const wireframe = document.querySelector('.item-row1');
-    if (wireframe) {
-        wireframe.style.backgroundImage = isFuturistic
-            ? "url('media/vorher_nachher_wireframe.png')"
-            : "url('media/wireframe_weiss.png')";
-    }
-
-    // vergleich Produktbilder
-    const products = document.getElementById("products");
-    if (products) {
-        products.src = isFuturistic
-            ? "media/vergleich_produktbilder.png"
-            : "media/vergleich_produktbilder_weiss.png";
-    }
->>>>>>> 1b4ad84c3e23b5b76eab4bf1b5fccd4c61330f83
   });
 }
 
